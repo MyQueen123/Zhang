@@ -1,0 +1,2518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4F0F3D02-4283-4C8F-885E-5DC0452E8619}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NET55.Sisyphus.Web</RootNamespace>
+    <AssemblyName>NET55.Sisyphus.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AopSdk">
+      <HintPath>..\Lib\AopSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="GeetestSDK">
+      <HintPath>..\Lib\GeetestSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\assets\css\admin.css" />
+    <Content Include="Admin\assets\css\amazeui.min.css" />
+    <Content Include="Admin\assets\css\app.css" />
+    <Content Include="Admin\assets\css\dicss.css" />
+    <Content Include="Admin\assets\css\pageBarStyle.css" />
+    <Content Include="Admin\assets\img\32.jpg" />
+    <Content Include="Admin\assets\img\43.jpg" />
+    <Content Include="Admin\assets\img\a1.png" />
+    <Content Include="Admin\assets\img\a10.png" />
+    <Content Include="Admin\assets\img\a2.png" />
+    <Content Include="Admin\assets\img\a3.png" />
+    <Content Include="Admin\assets\img\a4.png" />
+    <Content Include="Admin\assets\img\a5.png" />
+    <Content Include="Admin\assets\img\a6.png" />
+    <Content Include="Admin\assets\img\a7.png" />
+    <Content Include="Admin\assets\img\a8.png" />
+    <Content Include="Admin\assets\img\a9.png" />
+    <Content Include="Admin\assets\img\lbbg.png" />
+    <Content Include="Admin\assets\img\logo.png" />
+    <Content Include="Admin\assets\img\syncfusion-icons-white.png" />
+    <Content Include="Admin\assets\img\user01.png" />
+    <Content Include="Admin\assets\img\user02.png" />
+    <Content Include="Admin\assets\img\user03.png" />
+    <Content Include="Admin\assets\img\user04.png" />
+    <Content Include="Admin\assets\img\user05.png" />
+    <Content Include="Admin\assets\img\user06.png" />
+    <Content Include="Admin\assets\img\user07.png" />
+    <Content Include="Admin\assets\i\app-icon72x72%402x.png" />
+    <Content Include="Admin\assets\i\examples\admin-chrome.png" />
+    <Content Include="Admin\assets\i\examples\admin-firefox.png" />
+    <Content Include="Admin\assets\i\examples\admin-ie.png" />
+    <Content Include="Admin\assets\i\examples\admin-opera.png" />
+    <Content Include="Admin\assets\i\examples\admin-safari.png" />
+    <Content Include="Admin\assets\i\examples\adminPage.png" />
+    <Content Include="Admin\assets\i\examples\blogPage.png" />
+    <Content Include="Admin\assets\i\examples\landing.png" />
+    <Content Include="Admin\assets\i\examples\landingPage.png" />
+    <Content Include="Admin\assets\i\examples\loginPage.png" />
+    <Content Include="Admin\assets\i\examples\sidebarPage.png" />
+    <Content Include="Admin\assets\i\favicon.png" />
+    <Content Include="Admin\assets\i\startup-640x1096.png" />
+    <Content Include="Admin\assets\js\amazeui.min.js" />
+    <Content Include="Admin\assets\js\app.js" />
+    <Content Include="Admin\assets\js\dijs.js" />
+    <Content Include="Admin\assets\js\echarts.min.js" />
+    <Content Include="Admin\assets\js\exits.js" />
+    <Content Include="Admin\assets\js\iscroll.js" />
+    <Content Include="Admin\assets\js\jquery.min.js" />
+    <Content Include="Admin\assets\js\jquery.validate.min.js" />
+    <Content Include="Admin\Page\AdvertisingManager.aspx" />
+    <Content Include="Admin\Page\Article_WordManager.aspx" />
+    <Content Include="Admin\Page\BookManager.aspx" />
+    <Content Include="Admin\Page\BooksAdd.aspx" />
+    <Content Include="Admin\Page\BookTypeManager.aspx" />
+    <Content Include="Admin\Page\CommentManager.aspx" />
+    <Content Include="Admin\Page\EditBook.aspx" />
+    <Content Include="Admin\Page\Index.aspx" />
+    <Content Include="Admin\Page\Login.aspx" />
+    <Content Include="Admin\Page\OrderDetails.aspx" />
+    <Content Include="Admin\Page\OrderManager.aspx" />
+    <Content Include="Admin\Page\SearchManager.aspx" />
+    <Content Include="Admin\Page\UpdateOrders.aspx" />
+    <Content Include="BookCovers\1111.jpg" />
+    <Content Include="BookCovers\111122.jpg" />
+    <Content Include="BookCovers\111122333.jpg" />
+    <Content Include="BookCovers\1111223334.jpg" />
+    <Content Include="BookCovers\11112233341.jpg" />
+    <Content Include="BookCovers\1111223334111.jpg" />
+    <Content Include="BookCovers\151140991.jpg" />
+    <Content Include="BookCovers\234234.jpg" />
+    <Content Include="BookCovers\47578.jpg" />
+    <Content Include="BookCovers\7030122534.jpg" />
+    <Content Include="BookCovers\7030177169.jpg" />
+    <Content Include="BookCovers\7111113853.jpg" />
+    <Content Include="BookCovers\7111151755.jpg" />
+    <Content Include="BookCovers\711117013X.jpg" />
+    <Content Include="BookCovers\7111171144.jpg" />
+    <Content Include="BookCovers\7111174739.jpg" />
+    <Content Include="BookCovers\7113054846.jpg" />
+    <Content Include="BookCovers\7113057993.jpg" />
+    <Content Include="BookCovers\711305885X.jpg" />
+    <Content Include="BookCovers\7113064957.jpg" />
+    <Content Include="BookCovers\7113069185.jpg" />
+    <Content Include="BookCovers\7115091064.jpg" />
+    <Content Include="BookCovers\7115113610.jpg" />
+    <Content Include="BookCovers\7115125481.jpg" />
+    <Content Include="BookCovers\7115129827.jpg" />
+    <Content Include="BookCovers\7115136459.jpg" />
+    <Content Include="BookCovers\7115136726.jpg" />
+    <Content Include="BookCovers\7115137463.jpg" />
+    <Content Include="BookCovers\7115145229.jpg" />
+    <Content Include="BookCovers\7115147353.jpg" />
+    <Content Include="BookCovers\7115147973.jpg" />
+    <Content Include="BookCovers\7115151423.jpg" />
+    <Content Include="BookCovers\7121006650.jpg" />
+    <Content Include="BookCovers\7121008270.jpg" />
+    <Content Include="BookCovers\7121013290.jpg" />
+    <Content Include="BookCovers\7121014882.jpg" />
+    <Content Include="BookCovers\7121015889.jpg" />
+    <Content Include="BookCovers\7121019809.jpg" />
+    <Content Include="BookCovers\7121024586.jpg" />
+    <Content Include="BookCovers\7121025388.jpg" />
+    <Content Include="BookCovers\712102716X.jpg" />
+    <Content Include="BookCovers\7121028832.jpg" />
+    <Content Include="BookCovers\7121032465.jpg" />
+    <Content Include="BookCovers\7302075972.jpg" />
+    <Content Include="BookCovers\7302108536.jpg" />
+    <Content Include="BookCovers\730211157X.jpg" />
+    <Content Include="BookCovers\7302114145.jpg" />
+    <Content Include="BookCovers\7302125538.jpg" />
+    <Content Include="BookCovers\7302127352.jpg" />
+    <Content Include="BookCovers\7302131856.jpg" />
+    <Content Include="BookCovers\7302134154.jpg" />
+    <Content Include="BookCovers\7302134758.jpg" />
+    <Content Include="BookCovers\7302134758_new.jpg" />
+    <Content Include="BookCovers\7302138036.jpg" />
+    <Content Include="BookCovers\7302140189.jpg" />
+    <Content Include="BookCovers\750067077X.jpg" />
+    <Content Include="BookCovers\7508309464.jpg" />
+    <Content Include="BookCovers\7508312813.jpg" />
+    <Content Include="BookCovers\7508313127.jpg" />
+    <Content Include="BookCovers\750831549.jpg" />
+    <Content Include="BookCovers\7508442402.jpg" />
+    <Content Include="BookCovers\7560927041.jpg" />
+    <Content Include="BookCovers\756092771.jpg" />
+    <Content Include="BookCovers\7560928323.jpg" />
+    <Content Include="BookCovers\7561217056.jpg" />
+    <Content Include="BookCovers\7561221231.jpg" />
+    <Content Include="BookCovers\7564101210.jpg" />
+    <Content Include="BookCovers\7564102586.jpg" />
+    <Content Include="BookCovers\7810823345.jpg" />
+    <Content Include="BookCovers\790063259X.jpg" />
+    <Content Include="BookCovers\7980007786.jpg" />
+    <Content Include="BookCovers\83021085361111.jpg" />
+    <Content Include="BookCovers\8996733.jpg" />
+    <Content Include="BookCovers\9011122.jpg" />
+    <Content Include="BookCovers\9025178.jpg" />
+    <Content Include="BookCovers\9150365.jpg" />
+    <Content Include="BookCovers\9157098.jpg" />
+    <Content Include="BookCovers\9171366.jpg" />
+    <Content Include="BookCovers\9181847.jpg" />
+    <Content Include="BookCovers\9186653.jpg" />
+    <Content Include="BookCovers\9191389.jpg" />
+    <Content Include="BookCovers\9213579.jpg" />
+    <Content Include="BookCovers\9221944.jpg" />
+    <Content Include="BookCovers\9222502.jpg" />
+    <Content Include="BookCovers\9226773.jpg" />
+    <Content Include="BookCovers\9241052.jpg" />
+    <Content Include="BookCovers\9258259.jpg" />
+    <Content Include="BookCovers\9286670.jpg" />
+    <Content Include="BookCovers\9293343.jpg" />
+    <Content Include="BookCovers\9293450.jpg" />
+    <Content Include="BookCovers\9316709.jpg" />
+    <Content Include="BookCovers\9780471791201.jpg" />
+    <Content Include="BookCovers\9787030106780.jpg" />
+    <Content Include="BookCovers\9787030110091.jpg" />
+    <Content Include="BookCovers\9787030136022.jpg" />
+    <Content Include="BookCovers\9787030146779.jpg" />
+    <Content Include="BookCovers\9787030177162.jpg" />
+    <Content Include="BookCovers\9787030177162_s.jpg" />
+    <Content Include="BookCovers\9787030178756.jpg" />
+    <Content Include="BookCovers\9787030189080.jpg" />
+    <Content Include="BookCovers\9787030193421.jpg" />
+    <Content Include="BookCovers\9787040092448.jpg" />
+    <Content Include="BookCovers\9787040141481.jpg" />
+    <Content Include="BookCovers\9787040147766.jpg" />
+    <Content Include="BookCovers\9787111076452.jpg" />
+    <Content Include="BookCovers\9787111079521.jpg" />
+    <Content Include="BookCovers\9787111095927.jpg" />
+    <Content Include="BookCovers\9787111096955.jpg" />
+    <Content Include="BookCovers\9787111098553.jpg" />
+    <Content Include="BookCovers\9787111098935.jpg" />
+    <Content Include="BookCovers\9787111101840.jpg" />
+    <Content Include="BookCovers\9787111108078.jpg" />
+    <Content Include="BookCovers\9787111108184.jpg" />
+    <Content Include="BookCovers\9787111113379.jpg" />
+    <Content Include="BookCovers\9787111113812.jpg" />
+    <Content Include="BookCovers\9787111128052.jpg" />
+    <Content Include="BookCovers\9787111128069.jpg" />
+    <Content Include="BookCovers\9787111128069_new.jpg" />
+    <Content Include="BookCovers\9787111129431.jpg" />
+    <Content Include="BookCovers\9787111131656.jpg" />
+    <Content Include="BookCovers\9787111134893.jpg" />
+    <Content Include="BookCovers\9787111135838.jpg" />
+    <Content Include="BookCovers\9787111137511.jpg" />
+    <Content Include="BookCovers\9787111140955.jpg" />
+    <Content Include="BookCovers\9787111141464.jpg" />
+    <Content Include="BookCovers\9787111145028.jpg" />
+    <Content Include="BookCovers\9787111149644.jpg" />
+    <Content Include="BookCovers\9787111151685.jpg" />
+    <Content Include="BookCovers\9787111152835.jpg" />
+    <Content Include="BookCovers\9787111155126.jpg" />
+    <Content Include="BookCovers\9787111158387.jpg" />
+    <Content Include="BookCovers\9787111159797.jpg" />
+    <Content Include="BookCovers\9787111159841.jpg" />
+    <Content Include="BookCovers\9787111162209.jpg" />
+    <Content Include="BookCovers\9787111164906.jpg" />
+    <Content Include="BookCovers\9787111169383.jpg" />
+    <Content Include="BookCovers\9787111171157.jpg" />
+    <Content Include="BookCovers\9787111175285.jpg" />
+    <Content Include="BookCovers\9787111177746.jpg" />
+    <Content Include="BookCovers\9787111179016.jpg" />
+    <Content Include="BookCovers\9787111180890.jpg" />
+    <Content Include="BookCovers\9787111182467.jpg" />
+    <Content Include="BookCovers\9787111185239.jpg" />
+    <Content Include="BookCovers\9787111186823.jpg" />
+    <Content Include="BookCovers\9787111187752.jpg" />
+    <Content Include="BookCovers\9787111188896.jpg" />
+    <Content Include="BookCovers\9787111190592.jpg" />
+    <Content Include="BookCovers\9787111192367.jpg" />
+    <Content Include="BookCovers\9787111192954.jpg" />
+    <Content Include="BookCovers\9787111195986.jpg" />
+    <Content Include="BookCovers\9787111196242.jpg" />
+    <Content Include="BookCovers\9787111196266.jpg" />
+    <Content Include="BookCovers\9787111199182.jpg" />
+    <Content Include="BookCovers\9787111199472.jpg" />
+    <Content Include="BookCovers\9787111199496.jpg" />
+    <Content Include="BookCovers\9787111199717.jpg" />
+    <Content Include="BookCovers\9787111199724.jpg" />
+    <Content Include="BookCovers\9787111199731.jpg" />
+    <Content Include="BookCovers\9787111200826.jpg" />
+    <Content Include="BookCovers\9787111201212.jpg" />
+    <Content Include="BookCovers\9787111202031.jpg" />
+    <Content Include="BookCovers\9787111202134.jpg" />
+    <Content Include="BookCovers\9787111202589.jpg" />
+    <Content Include="BookCovers\9787111203437.jpg" />
+    <Content Include="BookCovers\9787111204671.jpg" />
+    <Content Include="BookCovers\9787111205685.jpg" />
+    <Content Include="BookCovers\9787111205807.jpg" />
+    <Content Include="BookCovers\9787111205852.jpg" />
+    <Content Include="BookCovers\9787111205869.jpg" />
+    <Content Include="BookCovers\9787111206590.jpg" />
+    <Content Include="BookCovers\9787111206842.jpg" />
+    <Content Include="BookCovers\9787111207771.jpg" />
+    <Content Include="BookCovers\9787111207788.jpg" />
+    <Content Include="BookCovers\9787111210696.jpg" />
+    <Content Include="BookCovers\9787111211594.jpg" />
+    <Content Include="BookCovers\9787111211969.jpg" />
+    <Content Include="BookCovers\9787111212102.jpg" />
+    <Content Include="BookCovers\9787111212508.jpg" />
+    <Content Include="BookCovers\9787111212973.jpg" />
+    <Content Include="BookCovers\9787111213017.jpg" />
+    <Content Include="BookCovers\9787111213826.jpg" />
+    <Content Include="BookCovers\9787111214755.jpg" />
+    <Content Include="BookCovers\9787111216261.jpg" />
+    <Content Include="BookCovers\9787111216322.jpg" />
+    <Content Include="BookCovers\9787111216919.jpg" />
+    <Content Include="BookCovers\9787111216926.jpg" />
+    <Content Include="BookCovers\9787111218456.jpg" />
+    <Content Include="BookCovers\9787111218883.jpg" />
+    <Content Include="BookCovers\9787111220565.jpg" />
+    <Content Include="BookCovers\9787111220572.jpg" />
+    <Content Include="BookCovers\9787113041564.jpg" />
+    <Content Include="BookCovers\9787113043933.jpg" />
+    <Content Include="BookCovers\9787113052423.jpg" />
+    <Content Include="BookCovers\9787113053246.jpg" />
+    <Content Include="BookCovers\9787113053819.jpg" />
+    <Content Include="BookCovers\9787113055233.jpg" />
+    <Content Include="BookCovers\9787113060145.jpg" />
+    <Content Include="BookCovers\9787113060350.jpg" />
+    <Content Include="BookCovers\9787113060732.jpg" />
+    <Content Include="BookCovers\9787113061548.jpg" />
+    <Content Include="BookCovers\9787113061630.jpg" />
+    <Content Include="BookCovers\9787113064020.jpg" />
+    <Content Include="BookCovers\9787113065690.jpg" />
+    <Content Include="BookCovers\9787113067489.jpg" />
+    <Content Include="BookCovers\9787113067625.jpg" />
+    <Content Include="BookCovers\9787113070199.jpg" />
+    <Content Include="BookCovers\9787113070366.jpg" />
+    <Content Include="BookCovers\9787113075347.jpg" />
+    <Content Include="BookCovers\9787113077143.jpg" />
+    <Content Include="BookCovers\9787115089915.jpg" />
+    <Content Include="BookCovers\9787115103284.jpg" />
+    <Content Include="BookCovers\9787115111449.jpg" />
+    <Content Include="BookCovers\9787115112286.jpg" />
+    <Content Include="BookCovers\9787115112385.jpg" />
+    <Content Include="BookCovers\9787115113139.jpg" />
+    <Content Include="BookCovers\9787115113191.jpg" />
+    <Content Include="BookCovers\9787115117274.jpg" />
+    <Content Include="BookCovers\9787115119599.jpg" />
+    <Content Include="BookCovers\9787115120984.jpg" />
+    <Content Include="BookCovers\9787115121585.jpg" />
+    <Content Include="BookCovers\9787115121868.jpg" />
+    <Content Include="BookCovers\9787115123084.jpg" />
+    <Content Include="BookCovers\9787115123411.jpg" />
+    <Content Include="BookCovers\9787115123442.jpg" />
+    <Content Include="BookCovers\9787115123886.jpg" />
+    <Content Include="BookCovers\9787115124258.jpg" />
+    <Content Include="BookCovers\9787115124425.jpg" />
+    <Content Include="BookCovers\9787115124555.jpg" />
+    <Content Include="BookCovers\9787115125149.jpg" />
+    <Content Include="BookCovers\9787115125590.jpg" />
+    <Content Include="BookCovers\9787115126887.jpg" />
+    <Content Include="BookCovers\9787115127099.jpg" />
+    <Content Include="BookCovers\9787115127167.jpg" />
+    <Content Include="BookCovers\9787115128959.jpg" />
+    <Content Include="BookCovers\9787115129277.jpg" />
+    <Content Include="BookCovers\9787115129659.jpg" />
+    <Content Include="BookCovers\9787115129963.jpg" />
+    <Content Include="BookCovers\9787115130242.jpg" />
+    <Content Include="BookCovers\9787115131836.jpg" />
+    <Content Include="BookCovers\9787115131881.jpg" />
+    <Content Include="BookCovers\9787115131973.jpg" />
+    <Content Include="BookCovers\9787115132123.jpg" />
+    <Content Include="BookCovers\9787115132147.jpg" />
+    <Content Include="BookCovers\9787115132154.jpg" />
+    <Content Include="BookCovers\9787115134165.jpg" />
+    <Content Include="BookCovers\9787115134165_new.jpg" />
+    <Content Include="BookCovers\9787115134189.jpg" />
+    <Content Include="BookCovers\9787115135278.jpg" />
+    <Content Include="BookCovers\9787115136442.jpg" />
+    <Content Include="BookCovers\9787115136640.jpg" />
+    <Content Include="BookCovers\9787115136640_new.jpg" />
+    <Content Include="BookCovers\9787115136848.jpg" />
+    <Content Include="BookCovers\9787115136923.jpg" />
+    <Content Include="BookCovers\9787115137074.jpg" />
+    <Content Include="BookCovers\9787115137081.jpg" />
+    <Content Include="BookCovers\9787115137098.jpg" />
+    <Content Include="BookCovers\9787115137241.jpg" />
+    <Content Include="BookCovers\9787115137357.jpg" />
+    <Content Include="BookCovers\9787115137449.jpg" />
+    <Content Include="BookCovers\9787115137531.jpg" />
+    <Content Include="BookCovers\9787115137708.jpg" />
+    <Content Include="BookCovers\9787115137715.jpg" />
+    <Content Include="BookCovers\9787115138354.jpg" />
+    <Content Include="BookCovers\9787115138378.jpg" />
+    <Content Include="BookCovers\9787115139115.jpg" />
+    <Content Include="BookCovers\9787115139214.jpg" />
+    <Content Include="BookCovers\9787115139238.jpg" />
+    <Content Include="BookCovers\9787115139283.jpg" />
+    <Content Include="BookCovers\9787115140562.jpg" />
+    <Content Include="BookCovers\9787115141019.jpg" />
+    <Content Include="BookCovers\9787115141248.jpg" />
+    <Content Include="BookCovers\9787115141378.jpg" />
+    <Content Include="BookCovers\9787115141521.jpg" />
+    <Content Include="BookCovers\9787115141521_s.jpg" />
+    <Content Include="BookCovers\9787115142054.jpg" />
+    <Content Include="BookCovers\9787115142252.jpg" />
+    <Content Include="BookCovers\9787115142412.jpg" />
+    <Content Include="BookCovers\9787115142573.jpg" />
+    <Content Include="BookCovers\9787115142696.jpg" />
+    <Content Include="BookCovers\9787115142931.jpg" />
+    <Content Include="BookCovers\9787115143150.jpg" />
+    <Content Include="BookCovers\9787115143150_new.jpg" />
+    <Content Include="BookCovers\9787115143327.jpg" />
+    <Content Include="BookCovers\9787115144812.jpg" />
+    <Content Include="BookCovers\9787115145543.jpg" />
+    <Content Include="BookCovers\9787115145543_new.jpg" />
+    <Content Include="BookCovers\9787115145819.jpg" />
+    <Content Include="BookCovers\9787115146892.jpg" />
+    <Content Include="BookCovers\9787115146922.jpg" />
+    <Content Include="BookCovers\9787115147363.jpg" />
+    <Content Include="BookCovers\9787115148032.jpg" />
+    <Content Include="BookCovers\9787115148049.jpg" />
+    <Content Include="BookCovers\9787115148131.jpg" />
+    <Content Include="BookCovers\9787115148285.jpg" />
+    <Content Include="BookCovers\9787115148339.jpg" />
+    <Content Include="BookCovers\9787115148728.jpg" />
+    <Content Include="BookCovers\9787115148766.jpg" />
+    <Content Include="BookCovers\9787115148872.jpg" />
+    <Content Include="BookCovers\9787115149046.jpg" />
+    <Content Include="BookCovers\9787115149138.jpg" />
+    <Content Include="BookCovers\9787115149145.jpg" />
+    <Content Include="BookCovers\9787115149299.jpg" />
+    <Content Include="BookCovers\9787115149534.jpg" />
+    <Content Include="BookCovers\9787115149565.jpg" />
+    <Content Include="BookCovers\9787115149763.jpg" />
+    <Content Include="BookCovers\9787115150158.jpg" />
+    <Content Include="BookCovers\9787115150295.jpg" />
+    <Content Include="BookCovers\9787115150349.jpg" />
+    <Content Include="BookCovers\9787115150868.jpg" />
+    <Content Include="BookCovers\9787115151094.jpg" />
+    <Content Include="BookCovers\9787115151124.jpg" />
+    <Content Include="BookCovers\9787115151353.jpg" />
+    <Content Include="BookCovers\9787115151698.jpg" />
+    <Content Include="BookCovers\9787115152091.jpg" />
+    <Content Include="BookCovers\9787115152237.jpg" />
+    <Content Include="BookCovers\9787115152381.jpg" />
+    <Content Include="BookCovers\9787115152510.jpg" />
+    <Content Include="BookCovers\9787115152572.jpg" />
+    <Content Include="BookCovers\9787115152978.jpg" />
+    <Content Include="BookCovers\9787115153142.jpg" />
+    <Content Include="BookCovers\9787115153166.jpg" />
+    <Content Include="BookCovers\9787115153210.jpg" />
+    <Content Include="BookCovers\9787115153555.jpg" />
+    <Content Include="BookCovers\9787115153654.jpg" />
+    <Content Include="BookCovers\9787115153852.jpg" />
+    <Content Include="BookCovers\9787115153876.jpg" />
+    <Content Include="BookCovers\9787115154026.jpg" />
+    <Content Include="BookCovers\9787115154088.jpg" />
+    <Content Include="BookCovers\9787115154101.jpg" />
+    <Content Include="BookCovers\9787115154231.jpg" />
+    <Content Include="BookCovers\9787115154286.jpg" />
+    <Content Include="BookCovers\9787115154361.jpg" />
+    <Content Include="BookCovers\9787115154408.jpg" />
+    <Content Include="BookCovers\9787115154668.jpg" />
+    <Content Include="BookCovers\9787115154828.jpg" />
+    <Content Include="BookCovers\9787115155108.jpg" />
+    <Content Include="BookCovers\9787115155108_new.jpg" />
+    <Content Include="BookCovers\9787115155351.jpg" />
+    <Content Include="BookCovers\9787115155368.jpg" />
+    <Content Include="BookCovers\9787115155375.jpg" />
+    <Content Include="BookCovers\9787115155504.jpg" />
+    <Content Include="BookCovers\9787115155528.jpg" />
+    <Content Include="BookCovers\9787115155566.jpg" />
+    <Content Include="BookCovers\9787115155672.jpg" />
+    <Content Include="BookCovers\9787115155696.jpg" />
+    <Content Include="BookCovers\9787115155849.jpg" />
+    <Content Include="BookCovers\9787115155917.jpg" />
+    <Content Include="BookCovers\9787115156259.jpg" />
+    <Content Include="BookCovers\9787115156433.jpg" />
+    <Content Include="BookCovers\9787115156815.jpg" />
+    <Content Include="BookCovers\9787115156884.jpg" />
+    <Content Include="BookCovers\9787115157058.jpg" />
+    <Content Include="BookCovers\9787115157485.jpg" />
+    <Content Include="BookCovers\9787115157492.jpg" />
+    <Content Include="BookCovers\9787115157508.jpg" />
+    <Content Include="BookCovers\9787115157652.jpg" />
+    <Content Include="BookCovers\9787115157676.jpg" />
+    <Content Include="BookCovers\9787115157690.jpg" />
+    <Content Include="BookCovers\9787115157898.jpg" />
+    <Content Include="BookCovers\9787115157928.jpg" />
+    <Content Include="BookCovers\9787115158284.jpg" />
+    <Content Include="BookCovers\9787115158284_new.jpg" />
+    <Content Include="BookCovers\9787115158642.jpg" />
+    <Content Include="BookCovers\9787115158666.jpg" />
+    <Content Include="BookCovers\9787115158680.jpg" />
+    <Content Include="BookCovers\9787115158727.jpg" />
+    <Content Include="BookCovers\9787115158864.jpg" />
+    <Content Include="BookCovers\978711515888.jpg" />
+    <Content Include="BookCovers\978711515888_new.jpg" />
+    <Content Include="BookCovers\9787115158949.jpg" />
+    <Content Include="BookCovers\9787115159066.jpg" />
+    <Content Include="BookCovers\9787115159243.jpg" />
+    <Content Include="BookCovers\9787115159342.jpg" />
+    <Content Include="BookCovers\9787115159410.jpg" />
+    <Content Include="BookCovers\9787115159427.jpg" />
+    <Content Include="BookCovers\9787115159700.jpg" />
+    <Content Include="BookCovers\9787115159731.jpg" />
+    <Content Include="BookCovers\9787115159755.jpg" />
+    <Content Include="BookCovers\9787115159755_new.jpg" />
+    <Content Include="BookCovers\9787115159878.jpg" />
+    <Content Include="BookCovers\9787115159878_new.jpg" />
+    <Content Include="BookCovers\9787115159908.jpg" />
+    <Content Include="BookCovers\9787115159960.jpg" />
+    <Content Include="BookCovers\9787115159991.jpg" />
+    <Content Include="BookCovers\9787115160003.jpg" />
+    <Content Include="BookCovers\9787115160188.jpg" />
+    <Content Include="BookCovers\9787115160355.jpg" />
+    <Content Include="BookCovers\9787115160355_new.jpg" />
+    <Content Include="BookCovers\9787115160355_s.jpg" />
+    <Content Include="BookCovers\9787115160584.jpg" />
+    <Content Include="BookCovers\9787115160584_new.jpg" />
+    <Content Include="BookCovers\9787115160614.jpg" />
+    <Content Include="BookCovers\9787115161116.jpg" />
+    <Content Include="BookCovers\9787115161147.jpg" />
+    <Content Include="BookCovers\9787115161222.jpg" />
+    <Content Include="BookCovers\9787115161260.jpg" />
+    <Content Include="BookCovers\9787115161307.jpg" />
+    <Content Include="BookCovers\9787115161321.jpg" />
+    <Content Include="BookCovers\9787115161406.jpg" />
+    <Content Include="BookCovers\9787115161482.jpg" />
+    <Content Include="BookCovers\9787115161529.jpg" />
+    <Content Include="BookCovers\9787115161888.jpg" />
+    <Content Include="BookCovers\9787115162083.jpg" />
+    <Content Include="BookCovers\9787115162236.jpg" />
+    <Content Include="BookCovers\9787115162304.jpg" />
+    <Content Include="BookCovers\9787115162663.jpg" />
+    <Content Include="BookCovers\9787115162717.jpg" />
+    <Content Include="BookCovers\9787115162946.jpg" />
+    <Content Include="BookCovers\9787115163073.jpg" />
+    <Content Include="BookCovers\9787115163417.jpg" />
+    <Content Include="BookCovers\9787115163592.jpg" />
+    <Content Include="BookCovers\9787115163615.jpg" />
+    <Content Include="BookCovers\9787115163943.jpg" />
+    <Content Include="BookCovers\9787115165367.jpg" />
+    <Content Include="BookCovers\9787118026894.jpg" />
+    <Content Include="BookCovers\9787118034318.jpg" />
+    <Content Include="BookCovers\9787120000035.jpg" />
+    <Content Include="BookCovers\9787120000196.jpg" />
+    <Content Include="BookCovers\9787121000522.jpg" />
+    <Content Include="BookCovers\9787121000768.jpg" />
+    <Content Include="BookCovers\9787121002595.jpg" />
+    <Content Include="BookCovers\9787121002762.jpg" />
+    <Content Include="BookCovers\9787121002809.jpg" />
+    <Content Include="BookCovers\9787121002861.jpg" />
+    <Content Include="BookCovers\9787121004834.jpg" />
+    <Content Include="BookCovers\9787121005756.jpg" />
+    <Content Include="BookCovers\9787121005770.jpg" />
+    <Content Include="BookCovers\9787121006661.jpg" />
+    <Content Include="BookCovers\9787121006876.jpg" />
+    <Content Include="BookCovers\9787121007460.jpg" />
+    <Content Include="BookCovers\9787121008528.jpg" />
+    <Content Include="BookCovers\9787121008719.jpg" />
+    <Content Include="BookCovers\9787121009136.jpg" />
+    <Content Include="BookCovers\9787121009242.jpg" />
+    <Content Include="BookCovers\9787121009433.jpg" />
+    <Content Include="BookCovers\9787121010972.jpg" />
+    <Content Include="BookCovers\9787121011368.jpg" />
+    <Content Include="BookCovers\9787121014710.jpg" />
+    <Content Include="BookCovers\9787121014819.jpg" />
+    <Content Include="BookCovers\9787121014826.jpg" />
+    <Content Include="BookCovers\9787121015670.jpg" />
+    <Content Include="BookCovers\9787121015823.jpg" />
+    <Content Include="BookCovers\9787121016752.jpg" />
+    <Content Include="BookCovers\9787121016837.jpg" />
+    <Content Include="BookCovers\9787121016844.jpg" />
+    <Content Include="BookCovers\9787121017223.jpg" />
+    <Content Include="BookCovers\9787121017414.jpg" />
+    <Content Include="BookCovers\9787121017650.jpg" />
+    <Content Include="BookCovers\9787121018169.jpg" />
+    <Content Include="BookCovers\9787121018206.jpg" />
+    <Content Include="BookCovers\9787121018732.jpg" />
+    <Content Include="BookCovers\9787121018848.jpg" />
+    <Content Include="BookCovers\9787121018886.jpg" />
+    <Content Include="BookCovers\9787121018954.jpg" />
+    <Content Include="BookCovers\9787121019388.jpg" />
+    <Content Include="BookCovers\9787121019715.jpg" />
+    <Content Include="BookCovers\9787121020261.jpg" />
+    <Content Include="BookCovers\9787121020377.jpg" />
+    <Content Include="BookCovers\9787121020643.jpg" />
+    <Content Include="BookCovers\9787121021565.jpg" />
+    <Content Include="BookCovers\9787121022012.jpg" />
+    <Content Include="BookCovers\9787121022104.jpg" />
+    <Content Include="BookCovers\9787121022777.jpg" />
+    <Content Include="BookCovers\9787121023965.jpg" />
+    <Content Include="BookCovers\9787121024016.jpg" />
+    <Content Include="BookCovers\9787121024689.jpg" />
+    <Content Include="BookCovers\9787121024931.jpg" />
+    <Content Include="BookCovers\9787121025112.jpg" />
+    <Content Include="BookCovers\9787121025419.jpg" />
+    <Content Include="BookCovers\9787121026089.jpg" />
+    <Content Include="BookCovers\9787121026348.jpg" />
+    <Content Include="BookCovers\9787121026508.jpg" />
+    <Content Include="BookCovers\9787121026577.jpg" />
+    <Content Include="BookCovers\9787121026591.jpg" />
+    <Content Include="BookCovers\9787121026669.jpg" />
+    <Content Include="BookCovers\9787121027048.jpg" />
+    <Content Include="BookCovers\9787121027703.jpg" />
+    <Content Include="BookCovers\9787121027963.jpg" />
+    <Content Include="BookCovers\9787121028267.jpg" />
+    <Content Include="BookCovers\9787121028427.jpg" />
+    <Content Include="BookCovers\9787121028427_s.jpg" />
+    <Content Include="BookCovers\9787121028748.jpg" />
+    <Content Include="BookCovers\9787121030109.jpg" />
+    <Content Include="BookCovers\9787121030710.jpg" />
+    <Content Include="BookCovers\9787121031298.jpg" />
+    <Content Include="BookCovers\9787121031410.jpg" />
+    <Content Include="BookCovers\9787121031632.jpg" />
+    <Content Include="BookCovers\9787121032031.jpg" />
+    <Content Include="BookCovers\9787121032097.jpg" />
+    <Content Include="BookCovers\9787121032158.jpg" />
+    <Content Include="BookCovers\9787121032226.jpg" />
+    <Content Include="BookCovers\9787121032721.jpg" />
+    <Content Include="BookCovers\9787121032912.jpg" />
+    <Content Include="BookCovers\9787121032998.jpg" />
+    <Content Include="BookCovers\9787121033038.jpg" />
+    <Content Include="BookCovers\9787121033933.jpg" />
+    <Content Include="BookCovers\9787121033995.jpg" />
+    <Content Include="BookCovers\9787121034484.jpg" />
+    <Content Include="BookCovers\9787121034985.jpg" />
+    <Content Include="BookCovers\9787121035006.jpg" />
+    <Content Include="BookCovers\9787121035014.jpg" />
+    <Content Include="BookCovers\9787121035029.jpg" />
+    <Content Include="BookCovers\9787121035200.jpg" />
+    <Content Include="BookCovers\9787121035510.jpg" />
+    <Content Include="BookCovers\9787121035609.jpg" />
+    <Content Include="BookCovers\9787121035753.jpg" />
+    <Content Include="BookCovers\9787121035753_new.jpg" />
+    <Content Include="BookCovers\9787121035807.jpg" />
+    <Content Include="BookCovers\9787121035898.jpg" />
+    <Content Include="BookCovers\9787121035906.jpg" />
+    <Content Include="BookCovers\9787121036316.jpg" />
+    <Content Include="BookCovers\9787121036415.jpg" />
+    <Content Include="BookCovers\9787121036514.jpg" />
+    <Content Include="BookCovers\9787121036538.jpg" />
+    <Content Include="BookCovers\9787121036545.jpg" />
+    <Content Include="BookCovers\9787121037245.jpg" />
+    <Content Include="BookCovers\9787121037399.jpg" />
+    <Content Include="BookCovers\9787121038112.jpg" />
+    <Content Include="BookCovers\9787121038143.jpg" />
+    <Content Include="BookCovers\9787121038181.jpg" />
+    <Content Include="BookCovers\9787121038181_new.jpg" />
+    <Content Include="BookCovers\9787121038310.jpg" />
+    <Content Include="BookCovers\9787121038372.jpg" />
+    <Content Include="BookCovers\9787121038792.jpg" />
+    <Content Include="BookCovers\9787121038884.jpg" />
+    <Content Include="BookCovers\9787121039003.jpg" />
+    <Content Include="BookCovers\9787121039010.jpg" />
+    <Content Include="BookCovers\9787121039614.jpg" />
+    <Content Include="BookCovers\9787121039676.jpg" />
+    <Content Include="BookCovers\9787121039683.jpg" />
+    <Content Include="BookCovers\9787121039751.jpg" />
+    <Content Include="BookCovers\9787121039836.jpg" />
+    <Content Include="BookCovers\9787121039850.jpg" />
+    <Content Include="BookCovers\9787121039959.jpg" />
+    <Content Include="BookCovers\9787121039980.jpg" />
+    <Content Include="BookCovers\9787121039997.jpg" />
+    <Content Include="BookCovers\9787121040016.jpg" />
+    <Content Include="BookCovers\9787121040146.jpg" />
+    <Content Include="BookCovers\9787121040252.jpg" />
+    <Content Include="BookCovers\9787121041303.jpg" />
+    <Content Include="BookCovers\9787121041518.jpg" />
+    <Content Include="BookCovers\9787121041563.jpg" />
+    <Content Include="BookCovers\9787121042225.jpg" />
+    <Content Include="BookCovers\9787121042300.jpg" />
+    <Content Include="BookCovers\9787121042584.jpg" />
+    <Content Include="BookCovers\9787121042621.jpg" />
+    <Content Include="BookCovers\9787121042645.jpg" />
+    <Content Include="BookCovers\9787121042966.jpg" />
+    <Content Include="BookCovers\9787121043161.jpg" />
+    <Content Include="BookCovers\9787121043567.jpg" />
+    <Content Include="BookCovers\9787121045523.jpg" />
+    <Content Include="BookCovers\9787121045592.jpg" />
+    <Content Include="BookCovers\9787121045646.jpg" />
+    <Content Include="BookCovers\9787300076140.jpg" />
+    <Content Include="BookCovers\9787301051344.jpg" />
+    <Content Include="BookCovers\9787301051405.jpg" />
+    <Content Include="BookCovers\9787301051405_new.jpg" />
+    <Content Include="BookCovers\9787301061107.jpg" />
+    <Content Include="BookCovers\9787302043577.jpg" />
+    <Content Include="BookCovers\9787302046202.jpg" />
+    <Content Include="BookCovers\9787302052906.jpg" />
+    <Content Include="BookCovers\9787302055693.jpg" />
+    <Content Include="BookCovers\9787302056492.jpg" />
+    <Content Include="BookCovers\9787302058083.jpg" />
+    <Content Include="BookCovers\9787302058120.jpg" />
+    <Content Include="BookCovers\9787302058861.jpg" />
+    <Content Include="BookCovers\9787302059998.jpg" />
+    <Content Include="BookCovers\9787302063100.jpg" />
+    <Content Include="BookCovers\9787302063100_new.jpg" />
+    <Content Include="BookCovers\9787302064220.jpg" />
+    <Content Include="BookCovers\9787302064930.jpg" />
+    <Content Include="BookCovers\9787302064954.jpg" />
+    <Content Include="BookCovers\9787302065364.jpg" />
+    <Content Include="BookCovers\9787302066897.jpg" />
+    <Content Include="BookCovers\9787302068129.jpg" />
+    <Content Include="BookCovers\9787302069126.jpg" />
+    <Content Include="BookCovers\9787302072805.jpg" />
+    <Content Include="BookCovers\9787302072959.jpg" />
+    <Content Include="BookCovers\9787302074687.jpg" />
+    <Content Include="BookCovers\9787302075097.jpg" />
+    <Content Include="BookCovers\9787302076063.jpg" />
+    <Content Include="BookCovers\9787302077497.jpg" />
+    <Content Include="BookCovers\9787302078548.jpg" />
+    <Content Include="BookCovers\9787302078920.jpg" />
+    <Content Include="BookCovers\9787302079156.jpg" />
+    <Content Include="BookCovers\9787302079163.jpg" />
+    <Content Include="BookCovers\9787302079491.jpg" />
+    <Content Include="BookCovers\9787302080084.jpg" />
+    <Content Include="BookCovers\9787302080718.jpg" />
+    <Content Include="BookCovers\9787302080947.jpg" />
+    <Content Include="BookCovers\9787302081029.jpg" />
+    <Content Include="BookCovers\9787302081340.jpg" />
+    <Content Include="BookCovers\9787302082019.jpg" />
+    <Content Include="BookCovers\9787302082484.jpg" />
+    <Content Include="BookCovers\9787302083139.jpg" />
+    <Content Include="BookCovers\9787302083306.jpg" />
+    <Content Include="BookCovers\9787302084006.jpg" />
+    <Content Include="BookCovers\9787302084433.jpg" />
+    <Content Include="BookCovers\9787302085010.jpg" />
+    <Content Include="BookCovers\9787302085263.jpg" />
+    <Content Include="BookCovers\9787302085751.jpg" />
+    <Content Include="BookCovers\9787302085997.jpg" />
+    <Content Include="BookCovers\9787302086277.jpg" />
+    <Content Include="BookCovers\9787302086345.jpg" />
+    <Content Include="BookCovers\9787302086383.jpg" />
+    <Content Include="BookCovers\9787302088240.jpg" />
+    <Content Include="BookCovers\9787302088424.jpg" />
+    <Content Include="BookCovers\9787302088578.jpg" />
+    <Content Include="BookCovers\9787302089100.jpg" />
+    <Content Include="BookCovers\9787302089315.jpg" />
+    <Content Include="BookCovers\9787302090779.jpg" />
+    <Content Include="BookCovers\9787302090953.jpg" />
+    <Content Include="BookCovers\9787302091172.jpg" />
+    <Content Include="BookCovers\9787302091424.jpg" />
+    <Content Include="BookCovers\9787302091486.jpg" />
+    <Content Include="BookCovers\9787302092551.jpg" />
+    <Content Include="BookCovers\9787302092629.jpg" />
+    <Content Include="BookCovers\9787302092674.jpg" />
+    <Content Include="BookCovers\9787302094333.jpg" />
+    <Content Include="BookCovers\9787302095095.jpg" />
+    <Content Include="BookCovers\9787302096061.jpg" />
+    <Content Include="BookCovers\9787302096399.jpg" />
+    <Content Include="BookCovers\9787302098461.jpg" />
+    <Content Include="BookCovers\9787302099062.jpg" />
+    <Content Include="BookCovers\9787302099345.jpg" />
+    <Content Include="BookCovers\9787302100072.jpg" />
+    <Content Include="BookCovers\9787302100768.jpg" />
+    <Content Include="BookCovers\9787302100850.jpg" />
+    <Content Include="BookCovers\9787302102496.jpg" />
+    <Content Include="BookCovers\9787302102601.jpg" />
+    <Content Include="BookCovers\9787302102816.jpg" />
+    <Content Include="BookCovers\9787302103752.jpg" />
+    <Content Include="BookCovers\9787302104285.jpg" />
+    <Content Include="BookCovers\9787302104780.jpg" />
+    <Content Include="BookCovers\9787302104940.jpg" />
+    <Content Include="BookCovers\9787302105992.jpg" />
+    <Content Include="BookCovers\9787302106487.jpg" />
+    <Content Include="BookCovers\9787302106890.jpg" />
+    <Content Include="BookCovers\9787302108146.jpg" />
+    <Content Include="BookCovers\9787302108504.jpg" />
+    <Content Include="BookCovers\9787302108535.jpg" />
+    <Content Include="BookCovers\9787302108535_new.jpg" />
+    <Content Include="BookCovers\9787302108535_s.jpg" />
+    <Content Include="BookCovers\9787302110460.jpg" />
+    <Content Include="BookCovers\9787302111351.jpg" />
+    <Content Include="BookCovers\9787302113485.jpg" />
+    <Content Include="BookCovers\9787302114000.jpg" />
+    <Content Include="BookCovers\9787302114642.jpg" />
+    <Content Include="BookCovers\9787302115229.jpg" />
+    <Content Include="BookCovers\9787302115687.jpg" />
+    <Content Include="BookCovers\9787302116110.jpg" />
+    <Content Include="BookCovers\9787302119395.jpg" />
+    <Content Include="BookCovers\9787302119517.jpg" />
+    <Content Include="BookCovers\9787302120216.jpg" />
+    <Content Include="BookCovers\9787302120544.jpg" />
+    <Content Include="BookCovers\9787302120629.jpg" />
+    <Content Include="BookCovers\9787302121046.jpg" />
+    <Content Include="BookCovers\9787302124771.jpg" />
+    <Content Include="BookCovers\9787302126010.jpg" />
+    <Content Include="BookCovers\9787302127185.jpg" />
+    <Content Include="BookCovers\9787302127352.jpg" />
+    <Content Include="BookCovers\9787302127352_new.jpg" />
+    <Content Include="BookCovers\9787302127352_s.jpg" />
+    <Content Include="BookCovers\9787302127956.jpg" />
+    <Content Include="BookCovers\9787302128663.jpg" />
+    <Content Include="BookCovers\9787302129035.jpg" />
+    <Content Include="BookCovers\9787302129639.jpg" />
+    <Content Include="BookCovers\9787302130116.jpg" />
+    <Content Include="BookCovers\9787302130116_new.jpg" />
+    <Content Include="BookCovers\9787302130154.jpg" />
+    <Content Include="BookCovers\9787302131007.jpg" />
+    <Content Include="BookCovers\9787302131007_new.jpg" />
+    <Content Include="BookCovers\9787302131045.jpg" />
+    <Content Include="BookCovers\9787302131687.jpg" />
+    <Content Include="BookCovers\9787302131694.jpg" />
+    <Content Include="BookCovers\9787302131700.jpg" />
+    <Content Include="BookCovers\9787302131755.jpg" />
+    <Content Include="BookCovers\9787302131793.jpg" />
+    <Content Include="BookCovers\9787302132141.jpg" />
+    <Content Include="BookCovers\9787302132172.jpg" />
+    <Content Include="BookCovers\9787302132578.jpg" />
+    <Content Include="BookCovers\9787302133247.jpg" />
+    <Content Include="BookCovers\9787302133261.jpg" />
+    <Content Include="BookCovers\9787302134794.jpg" />
+    <Content Include="BookCovers\9787302134893.jpg" />
+    <Content Include="BookCovers\9787302135272.jpg" />
+    <Content Include="BookCovers\9787302135449.jpg" />
+    <Content Include="BookCovers\9787302135517.jpg" />
+    <Content Include="BookCovers\9787302135869.jpg" />
+    <Content Include="BookCovers\9787302135906.jpg" />
+    <Content Include="BookCovers\9787302135913.jpg" />
+    <Content Include="BookCovers\9787302136088.jpg" />
+    <Content Include="BookCovers\9787302136736.jpg" />
+    <Content Include="BookCovers\9787302137337.jpg" />
+    <Content Include="BookCovers\9787302137573.jpg" />
+    <Content Include="BookCovers\9787302137627.jpg" />
+    <Content Include="BookCovers\9787302138037.jpg" />
+    <Content Include="BookCovers\9787302138037_new.jpg" />
+    <Content Include="BookCovers\9787302138037_s.jpg" />
+    <Content Include="BookCovers\9787302138570.jpg" />
+    <Content Include="BookCovers\9787302138587.jpg" />
+    <Content Include="BookCovers\9787302139058.jpg" />
+    <Content Include="BookCovers\9787302139072.jpg" />
+    <Content Include="BookCovers\9787302139102.jpg" />
+    <Content Include="BookCovers\9787302139645.jpg" />
+    <Content Include="BookCovers\9787302139768.jpg" />
+    <Content Include="BookCovers\9787302140160.jpg" />
+    <Content Include="BookCovers\9787302140160_new.jpg" />
+    <Content Include="BookCovers\9787302140320.jpg" />
+    <Content Include="BookCovers\9787302140450.jpg" />
+    <Content Include="BookCovers\9787302140795.jpg" />
+    <Content Include="BookCovers\9787302140795_new.jpg" />
+    <Content Include="BookCovers\9787302140825.jpg" />
+    <Content Include="BookCovers\9787302140856.jpg" />
+    <Content Include="BookCovers\9787302140955.jpg" />
+    <Content Include="BookCovers\9787302141532.jpg" />
+    <Content Include="BookCovers\9787302142225.jpg" />
+    <Content Include="BookCovers\9787302142669.jpg" />
+    <Content Include="BookCovers\9787302142713.jpg" />
+    <Content Include="BookCovers\9787302142768.jpg" />
+    <Content Include="BookCovers\9787302142867.jpg" />
+    <Content Include="BookCovers\9787302143284.jpg" />
+    <Content Include="BookCovers\9787302143345.jpg" />
+    <Content Include="BookCovers\9787302143376.jpg" />
+    <Content Include="BookCovers\9787302143536.jpg" />
+    <Content Include="BookCovers\9787302144175.jpg" />
+    <Content Include="BookCovers\9787302144472.jpg" />
+    <Content Include="BookCovers\9787302144656.jpg" />
+    <Content Include="BookCovers\9787302144663.jpg" />
+    <Content Include="BookCovers\9787302144670.jpg" />
+    <Content Include="BookCovers\9787302144762.jpg" />
+    <Content Include="BookCovers\9787302144991.jpg" />
+    <Content Include="BookCovers\9787302145004.jpg" />
+    <Content Include="BookCovers\9787302145011.jpg" />
+    <Content Include="BookCovers\9787302145196.jpg" />
+    <Content Include="BookCovers\9787302145516.jpg" />
+    <Content Include="BookCovers\9787302146452.jpg" />
+    <Content Include="BookCovers\9787302146506.jpg" />
+    <Content Include="BookCovers\9787302146919.jpg" />
+    <Content Include="BookCovers\9787302146933.jpg" />
+    <Content Include="BookCovers\9787302147107.jpg" />
+    <Content Include="BookCovers\9787302147145.jpg" />
+    <Content Include="BookCovers\9787302147176.jpg" />
+    <Content Include="BookCovers\9787302147725.jpg" />
+    <Content Include="BookCovers\9787302148371.jpg" />
+    <Content Include="BookCovers\9787302148753.jpg" />
+    <Content Include="BookCovers\9787302148760.jpg" />
+    <Content Include="BookCovers\9787302148869.jpg" />
+    <Content Include="BookCovers\9787302149118.jpg" />
+    <Content Include="BookCovers\9787302149583.jpg" />
+    <Content Include="BookCovers\9787302149842.jpg" />
+    <Content Include="BookCovers\9787302149897.jpg" />
+    <Content Include="BookCovers\9787302149958.jpg" />
+    <Content Include="BookCovers\9787302150022.jpg" />
+    <Content Include="BookCovers\9787302150626.jpg" />
+    <Content Include="BookCovers\9787302151029.jpg" />
+    <Content Include="BookCovers\9787302151388.jpg" />
+    <Content Include="BookCovers\9787302151395.jpg" />
+    <Content Include="BookCovers\9787302151401.jpg" />
+    <Content Include="BookCovers\9787302151432.jpg" />
+    <Content Include="BookCovers\9787302151845.jpg" />
+    <Content Include="BookCovers\9787302151982.jpg" />
+    <Content Include="BookCovers\9787302151999.jpg" />
+    <Content Include="BookCovers\9787302152156.jpg" />
+    <Content Include="BookCovers\9787302152231.jpg" />
+    <Content Include="BookCovers\9787302154884.jpg" />
+    <Content Include="BookCovers\9787302155607.jpg" />
+    <Content Include="BookCovers\9787302155645.jpg" />
+    <Content Include="BookCovers\9787302155683.jpg" />
+    <Content Include="BookCovers\9787302157014.jpg" />
+    <Content Include="BookCovers\9787303076642.jpg" />
+    <Content Include="BookCovers\9787304026356.jpg" />
+    <Content Include="BookCovers\9787306024442.jpg" />
+    <Content Include="BookCovers\9787308050821.jpg" />
+    <Content Include="BookCovers\9787309048490.jpg" />
+    <Content Include="BookCovers\9787310022694.jpg" />
+    <Content Include="BookCovers\9787310022830.jpg" />
+    <Content Include="BookCovers\9787313024787.jpg" />
+    <Content Include="BookCovers\9787313024855.jpg" />
+    <Content Include="BookCovers\9787313034168.jpg" />
+    <Content Include="BookCovers\9787313046109.jpg" />
+    <Content Include="BookCovers\9787313046185.jpg" />
+    <Content Include="BookCovers\9787313049032.jpg" />
+    <Content Include="BookCovers\9787500642039.jpg" />
+    <Content Include="BookCovers\9787500651369.jpg" />
+    <Content Include="BookCovers\9787500671077.jpg" />
+    <Content Include="BookCovers\9787500673132.jpg" />
+    <Content Include="BookCovers\9787500673637.jpg" />
+    <Content Include="BookCovers\9787502587567.jpg" />
+    <Content Include="BookCovers\9787502593469.jpg" />
+    <Content Include="BookCovers\9787502761431.jpg" />
+    <Content Include="BookCovers\9787504537119.jpg" />
+    <Content Include="BookCovers\9787505375871.jpg" />
+    <Content Include="BookCovers\9787505377080.jpg" />
+    <Content Include="BookCovers\9787505378896.jpg" />
+    <Content Include="BookCovers\9787505380004.jpg" />
+    <Content Include="BookCovers\9787505380059.jpg" />
+    <Content Include="BookCovers\9787505384514.jpg" />
+    <Content Include="BookCovers\9787505386365.jpg" />
+    <Content Include="BookCovers\9787505387133.jpg" />
+    <Content Include="BookCovers\9787505390195.jpg" />
+    <Content Include="BookCovers\9787505391109.jpg" />
+    <Content Include="BookCovers\9787505392328.jpg" />
+    <Content Include="BookCovers\9787505393929.jpg" />
+    <Content Include="BookCovers\9787505394193.jpg" />
+    <Content Include="BookCovers\9787505396050.jpg" />
+    <Content Include="BookCovers\9787505396159.jpg" />
+    <Content Include="BookCovers\9787505397477.jpg" />
+    <Content Include="BookCovers\9787505398245.jpg" />
+    <Content Include="BookCovers\9787505398368.jpg" />
+    <Content Include="BookCovers\9787505399570.jpg" />
+    <Content Include="BookCovers\9787506022286.jpg" />
+    <Content Include="BookCovers\9787506283205.jpg" />
+    <Content Include="BookCovers\9787506283311.jpg" />
+    <Content Include="BookCovers\9787508037295.jpg" />
+    <Content Include="BookCovers\9787508037356.jpg" />
+    <Content Include="BookCovers\9787508040516.jpg" />
+    <Content Include="BookCovers\9787508308470.jpg" />
+    <Content Include="BookCovers\9787508311067.jpg" />
+    <Content Include="BookCovers\9787508313924.jpg" />
+    <Content Include="BookCovers\9787508314075.jpg" />
+    <Content Include="BookCovers\9787508315409.jpg" />
+    <Content Include="BookCovers\9787508315478.jpg" />
+    <Content Include="BookCovers\9787508318059.jpg" />
+    <Content Include="BookCovers\9787508318066.jpg" />
+    <Content Include="BookCovers\9787508318240.jpg" />
+    <Content Include="BookCovers\9787508319117.jpg" />
+    <Content Include="BookCovers\9787508319124.jpg" />
+    <Content Include="BookCovers\9787508322735.jpg" />
+    <Content Include="BookCovers\9787508322810.jpg" />
+    <Content Include="BookCovers\9787508324760.jpg" />
+    <Content Include="BookCovers\9787508327495.jpg" />
+    <Content Include="BookCovers\9787508332574.jpg" />
+    <Content Include="BookCovers\9787508332734.jpg" />
+    <Content Include="BookCovers\9787508332840.jpg" />
+    <Content Include="BookCovers\9787508334929.jpg" />
+    <Content Include="BookCovers\9787508338408.jpg" />
+    <Content Include="BookCovers\9787508338569.jpg" />
+    <Content Include="BookCovers\9787508338897.jpg" />
+    <Content Include="BookCovers\9787508342849.jpg" />
+    <Content Include="BookCovers\9787508351520.jpg" />
+    <Content Include="BookCovers\9787508356419.jpg" />
+    <Content Include="BookCovers\9787508411897.jpg" />
+    <Content Include="BookCovers\9787508415581.jpg" />
+    <Content Include="BookCovers\9787508418377.jpg" />
+    <Content Include="BookCovers\9787508423319.jpg" />
+    <Content Include="BookCovers\9787508424972.jpg" />
+    <Content Include="BookCovers\9787508426334.jpg" />
+    <Content Include="BookCovers\9787508427331.jpg" />
+    <Content Include="BookCovers\9787508427508.jpg" />
+    <Content Include="BookCovers\9787508430317.jpg" />
+    <Content Include="BookCovers\9787508438498.jpg" />
+    <Content Include="BookCovers\9787508438603.jpg" />
+    <Content Include="BookCovers\9787508440101.jpg" />
+    <Content Include="BookCovers\9787508440866.jpg" />
+    <Content Include="BookCovers\9787508441504.jpg" />
+    <Content Include="BookCovers\9787508442419.jpg" />
+    <Content Include="BookCovers\9787508442440.jpg" />
+    <Content Include="BookCovers\9787508442556.jpg" />
+    <Content Include="BookCovers\9787508442853.jpg" />
+    <Content Include="BookCovers\9787508442938.jpg" />
+    <Content Include="BookCovers\9787508444680.jpg" />
+    <Content Include="BookCovers\9787508445670.jpg" />
+    <Content Include="BookCovers\9787508447155.jpg" />
+    <Content Include="BookCovers\9787508448176.jpg" />
+    <Content Include="BookCovers\9787542736628.jpg" />
+    <Content Include="BookCovers\9787542736857.jpg" />
+    <Content Include="BookCovers\9787560522807.jpg" />
+    <Content Include="BookCovers\9787560618791.jpg" />
+    <Content Include="BookCovers\9787560924182.jpg" />
+    <Content Include="BookCovers\9787560925110.jpg" />
+    <Content Include="BookCovers\9787560925257.jpg" />
+    <Content Include="BookCovers\9787560927695.jpg" />
+    <Content Include="BookCovers\9787560927824.jpg" />
+    <Content Include="BookCovers\9787560928906.jpg" />
+    <Content Include="BookCovers\9787560929064.jpg" />
+    <Content Include="BookCovers\9787560929248.jpg" />
+    <Content Include="BookCovers\9787560929491.jpg" />
+    <Content Include="BookCovers\9787560930664.jpg" />
+    <Content Include="BookCovers\9787560931425.jpg" />
+    <Content Include="BookCovers\9787560931449.jpg" />
+    <Content Include="BookCovers\9787560931456.jpg" />
+    <Content Include="BookCovers\9787561217054.jpg" />
+    <Content Include="BookCovers\9787561751084.jpg" />
+    <Content Include="BookCovers\9787562136293.jpg" />
+    <Content Include="BookCovers\9787562136743.jpg" />
+    <Content Include="BookCovers\9787562324454.jpg" />
+    <Content Include="BookCovers\9787562426752.jpg" />
+    <Content Include="BookCovers\9787562437482.jpg" />
+    <Content Include="BookCovers\9787562921790.jpg" />
+    <Content Include="BookCovers\9787563508426.jpg" />
+    <Content Include="BookCovers\9787564101206.jpg" />
+    <Content Include="BookCovers\9787564101619.jpg" />
+    <Content Include="BookCovers\9787564101640.jpg" />
+    <Content Include="BookCovers\9787564103194.jpg" />
+    <Content Include="BookCovers\9787564103217.jpg" />
+    <Content Include="BookCovers\9787564105587.jpg" />
+    <Content Include="BookCovers\9787564105600.jpg" />
+    <Content Include="BookCovers\9787564106379.jpg" />
+    <Content Include="BookCovers\9787564106393.jpg" />
+    <Content Include="BookCovers\9787564107697.jpg" />
+    <Content Include="BookCovers\9787564107772.jpg" />
+    <Content Include="BookCovers\9787801727947.jpg" />
+    <Content Include="BookCovers\9787801838209.jpg" />
+    <Content Include="BookCovers\9787806217832.jpg" />
+    <Content Include="BookCovers\9787806219232.jpg" />
+    <Content Include="BookCovers\9787807341895.jpg" />
+    <Content Include="BookCovers\9787810457859.jpg" />
+    <Content Include="BookCovers\9787810457866.jpg" />
+    <Content Include="BookCovers\9787810458986.jpg" />
+    <Content Include="BookCovers\9787810776264.jpg" />
+    <Content Include="BookCovers\9787810777315.jpg" />
+    <Content Include="BookCovers\9787810777841.jpg" />
+    <Content Include="BookCovers\9787810821483.jpg" />
+    <Content Include="BookCovers\9787810822442.jpg" />
+    <Content Include="BookCovers\9787810824897.jpg" />
+    <Content Include="BookCovers\9787810826211.jpg" />
+    <Content Include="BookCovers\9787810829007.jpg" />
+    <Content Include="BookCovers\9787810829144.jpg" />
+    <Content Include="BookCovers\9787810849913.jpg" />
+    <Content Include="BookCovers\9787894871596.jpg" />
+    <Content Include="BookCovers\9787894940087.jpg" />
+    <Content Include="BookCovers\9787894940711.jpg" />
+    <Content Include="BookCovers\9787900038982.jpg" />
+    <Content Include="BookCovers\9787900088499.jpg" />
+    <Content Include="BookCovers\9787900107916.jpg" />
+    <Content Include="BookCovers\9787900107954.jpg" />
+    <Content Include="BookCovers\9787900614933.jpg" />
+    <Content Include="BookCovers\9787900614933_s.jpg" />
+    <Content Include="BookCovers\9787900635280.jpg" />
+    <Content Include="BookCovers\9787900635624.jpg" />
+    <Content Include="BookCovers\9787900641717.jpg" />
+    <Content Include="BookCovers\bg-1.jpg" />
+    <Content Include="BookCovers\bg-3.jpg" />
+    <Content Include="BookCovers\Computer.png" />
+    <Content Include="BookCovers\logo.png" />
+    <Content Include="Common\Map.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\css\admin.css" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\css\amazeui.css" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\css\amazeui.flat.css" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\css\amazeui.flat.min.css" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\css\amazeui.min.css" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\css\app.css" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\i\app-icon72x72%402x.png" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\i\examples\admin-chrome.png" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\i\examples\admin-firefox.png" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\i\examples\admin-ie.png" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\i\examples\admin-opera.png" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\i\examples\admin-safari.png" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\i\examples\adminPage.png" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\i\examples\blogPage.png" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\i\examples\landing.png" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\i\examples\landingPage.png" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\i\examples\loginPage.png" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\i\examples\sidebarPage.png" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\i\favicon.png" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\i\startup-640x1096.png" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\js\amazeui.ie8polyfill.js" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\js\amazeui.ie8polyfill.min.js" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\js\amazeui.js" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\js\amazeui.min.js" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\js\amazeui.widgets.helper.js" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\js\amazeui.widgets.helper.min.js" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\js\app.js" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\js\handlebars.min.js" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\js\jquery.min.js" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\js\jquery.validate.min.js" />
+    <Content Include="Home\basic\css\demo.css" />
+    <Content Include="Home\basic\images\chongzhi.png" />
+    <Content Include="Home\basic\images\ibar_sprites.png" />
+    <Content Include="Home\basic\images\loading.gif" />
+    <Content Include="Home\basic\images\logo.png" />
+    <Content Include="Home\basic\images\logobar.png" />
+    <Content Include="Home\basic\images\logobig.png" />
+    <Content Include="Home\basic\images\no-img_mid_.jpg" />
+    <Content Include="Home\basic\images\wdsc.png" />
+    <Content Include="Home\basic\images\weixin_code_145.png" />
+    <Content Include="Home\basic\js\jquery-1.7.min.js" />
+    <Content Include="Home\basic\js\jquery-1.9.min.js" />
+    <Content Include="Home\basic\js\quick_links.js" />
+    <Content Include="Home\ckeditor\adapters\jquery.js" />
+    <Content Include="Home\ckeditor\CHANGES.html" />
+    <Content Include="Home\ckeditor\ckeditor.asp" />
+    <Content Include="Home\ckeditor\ckeditor.js" />
+    <Content Include="Home\ckeditor\ckeditor_basic.js" />
+    <Content Include="Home\ckeditor\ckeditor_basic_source.js" />
+    <Content Include="Home\ckeditor\ckeditor_source.js" />
+    <Content Include="Home\ckeditor\config.js" />
+    <Content Include="Home\ckeditor\contents.css" />
+    <Content Include="Home\ckeditor\images\spacer.gif" />
+    <Content Include="Home\ckeditor\INSTALL.html" />
+    <Content Include="Home\ckeditor\lang\af.js" />
+    <Content Include="Home\ckeditor\lang\ar.js" />
+    <Content Include="Home\ckeditor\lang\bg.js" />
+    <Content Include="Home\ckeditor\lang\bn.js" />
+    <Content Include="Home\ckeditor\lang\bs.js" />
+    <Content Include="Home\ckeditor\lang\ca.js" />
+    <Content Include="Home\ckeditor\lang\cs.js" />
+    <Content Include="Home\ckeditor\lang\cy.js" />
+    <Content Include="Home\ckeditor\lang\da.js" />
+    <Content Include="Home\ckeditor\lang\de.js" />
+    <Content Include="Home\ckeditor\lang\el.js" />
+    <Content Include="Home\ckeditor\lang\en-au.js" />
+    <Content Include="Home\ckeditor\lang\en-ca.js" />
+    <Content Include="Home\ckeditor\lang\en-gb.js" />
+    <Content Include="Home\ckeditor\lang\en.js" />
+    <Content Include="Home\ckeditor\lang\eo.js" />
+    <Content Include="Home\ckeditor\lang\es.js" />
+    <Content Include="Home\ckeditor\lang\et.js" />
+    <Content Include="Home\ckeditor\lang\eu.js" />
+    <Content Include="Home\ckeditor\lang\fa.js" />
+    <Content Include="Home\ckeditor\lang\fi.js" />
+    <Content Include="Home\ckeditor\lang\fo.js" />
+    <Content Include="Home\ckeditor\lang\fr-ca.js" />
+    <Content Include="Home\ckeditor\lang\fr.js" />
+    <Content Include="Home\ckeditor\lang\gl.js" />
+    <Content Include="Home\ckeditor\lang\gu.js" />
+    <Content Include="Home\ckeditor\lang\he.js" />
+    <Content Include="Home\ckeditor\lang\hi.js" />
+    <Content Include="Home\ckeditor\lang\hr.js" />
+    <Content Include="Home\ckeditor\lang\hu.js" />
+    <Content Include="Home\ckeditor\lang\is.js" />
+    <Content Include="Home\ckeditor\lang\it.js" />
+    <Content Include="Home\ckeditor\lang\ja.js" />
+    <Content Include="Home\ckeditor\lang\ka.js" />
+    <Content Include="Home\ckeditor\lang\km.js" />
+    <Content Include="Home\ckeditor\lang\ko.js" />
+    <Content Include="Home\ckeditor\lang\lt.js" />
+    <Content Include="Home\ckeditor\lang\lv.js" />
+    <Content Include="Home\ckeditor\lang\mn.js" />
+    <Content Include="Home\ckeditor\lang\ms.js" />
+    <Content Include="Home\ckeditor\lang\nb.js" />
+    <Content Include="Home\ckeditor\lang\nl.js" />
+    <Content Include="Home\ckeditor\lang\no.js" />
+    <Content Include="Home\ckeditor\lang\pl.js" />
+    <Content Include="Home\ckeditor\lang\pt-br.js" />
+    <Content Include="Home\ckeditor\lang\pt.js" />
+    <Content Include="Home\ckeditor\lang\ro.js" />
+    <Content Include="Home\ckeditor\lang\ru.js" />
+    <Content Include="Home\ckeditor\lang\sk.js" />
+    <Content Include="Home\ckeditor\lang\sl.js" />
+    <Content Include="Home\ckeditor\lang\sr-latn.js" />
+    <Content Include="Home\ckeditor\lang\sr.js" />
+    <Content Include="Home\ckeditor\lang\sv.js" />
+    <Content Include="Home\ckeditor\lang\th.js" />
+    <Content Include="Home\ckeditor\lang\tr.js" />
+    <Content Include="Home\ckeditor\lang\uk.js" />
+    <Content Include="Home\ckeditor\lang\vi.js" />
+    <Content Include="Home\ckeditor\lang\zh-cn.js" />
+    <Content Include="Home\ckeditor\lang\zh.js" />
+    <Content Include="Home\ckeditor\lang\_languages.js" />
+    <Content Include="Home\ckeditor\lang\_translationstatus.txt" />
+    <Content Include="Home\ckeditor\LICENSE.html" />
+    <Content Include="Home\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Home\ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="Home\ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="Home\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="Home\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Home\ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="Home\ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="Home\ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="Home\ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="Home\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Home\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="Home\ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="Home\ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="Home\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Home\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="Home\ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="Home\ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="Home\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="Home\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="Home\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="Home\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="Home\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="Home\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="Home\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="Home\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="Home\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="Home\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="Home\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="Home\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="Home\ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="Home\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="Home\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="Home\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="Home\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="Home\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="Home\ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="Home\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="Home\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="Home\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Home\ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="Home\ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="Home\ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="Home\ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="Home\ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="Home\ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="Home\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="Home\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Home\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="Home\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="Home\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="Home\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="Home\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="Home\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="Home\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="Home\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="Home\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="Home\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="Home\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="Home\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="Home\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="Home\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Home\ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="Home\ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="Home\ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="Home\ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="Home\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Home\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="Home\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="Home\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="Home\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="Home\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="Home\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="Home\ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="Home\ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="Home\ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="Home\ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="Home\ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="Home\ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="Home\ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="Home\ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="Home\ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="Home\ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="Home\ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="Home\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Home\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Home\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Home\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Home\ckeditor\plugins\xml\plugin.js" />
+    <Content Include="Home\ckeditor\skins\kama\dialog.css" />
+    <Content Include="Home\ckeditor\skins\kama\editor.css" />
+    <Content Include="Home\ckeditor\skins\kama\icons.png" />
+    <Content Include="Home\ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="Home\ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="Home\ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="Home\ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="Home\ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="Home\ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="Home\ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="Home\ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="Home\ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="Home\ckeditor\skins\kama\skin.js" />
+    <Content Include="Home\ckeditor\skins\kama\templates.css" />
+    <Content Include="Home\ckeditor\skins\office2003\dialog.css" />
+    <Content Include="Home\ckeditor\skins\office2003\editor.css" />
+    <Content Include="Home\ckeditor\skins\office2003\icons.png" />
+    <Content Include="Home\ckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="Home\ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="Home\ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="Home\ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="Home\ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="Home\ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="Home\ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="Home\ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="Home\ckeditor\skins\office2003\skin.js" />
+    <Content Include="Home\ckeditor\skins\office2003\templates.css" />
+    <Content Include="Home\ckeditor\skins\v2\dialog.css" />
+    <Content Include="Home\ckeditor\skins\v2\editor.css" />
+    <Content Include="Home\ckeditor\skins\v2\icons.png" />
+    <Content Include="Home\ckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="Home\ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="Home\ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="Home\ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="Home\ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="Home\ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="Home\ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="Home\ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="Home\ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="Home\ckeditor\skins\v2\skin.js" />
+    <Content Include="Home\ckeditor\skins\v2\templates.css" />
+    <Content Include="Home\ckeditor\themes\default\theme.js" />
+    <Content Include="Home\ckeditor\_samples\adobeair\application.xml" />
+    <Content Include="Home\ckeditor\_samples\adobeair\sample.html" />
+    <Content Include="Home\ckeditor\_samples\ajax.html" />
+    <Content Include="Home\ckeditor\_samples\api.html" />
+    <Content Include="Home\ckeditor\_samples\api_dialog.html" />
+    <Content Include="Home\ckeditor\_samples\api_dialog\my_dialog.js" />
+    <Content Include="Home\ckeditor\_samples\asp\advanced.asp" />
+    <Content Include="Home\ckeditor\_samples\asp\events.asp" />
+    <Content Include="Home\ckeditor\_samples\asp\index.html" />
+    <Content Include="Home\ckeditor\_samples\asp\replace.asp" />
+    <Content Include="Home\ckeditor\_samples\asp\replaceall.asp" />
+    <Content Include="Home\ckeditor\_samples\asp\sample_posteddata.asp" />
+    <Content Include="Home\ckeditor\_samples\asp\standalone.asp" />
+    <Content Include="Home\ckeditor\_samples\assets\output_for_flash.swf" />
+    <Content Include="Home\ckeditor\_samples\assets\output_xhtml.css" />
+    <Content Include="Home\ckeditor\_samples\assets\parsesample.css" />
+    <Content Include="Home\ckeditor\_samples\assets\swfobject.js" />
+    <Content Include="Home\ckeditor\_samples\autogrow.html" />
+    <Content Include="Home\ckeditor\_samples\bbcode.html" />
+    <Content Include="Home\ckeditor\_samples\devtools.html" />
+    <Content Include="Home\ckeditor\_samples\divreplace.html" />
+    <Content Include="Home\ckeditor\_samples\enterkey.html" />
+    <Content Include="Home\ckeditor\_samples\fullpage.html" />
+    <Content Include="Home\ckeditor\_samples\index.html" />
+    <Content Include="Home\ckeditor\_samples\jqueryadapter.html" />
+    <Content Include="Home\ckeditor\_samples\output_for_flash.html" />
+    <Content Include="Home\ckeditor\_samples\output_html.html" />
+    <Content Include="Home\ckeditor\_samples\output_xhtml.html" />
+    <Content Include="Home\ckeditor\_samples\php\index.html" />
+    <Content Include="Home\ckeditor\_samples\placeholder.html" />
+    <Content Include="Home\ckeditor\_samples\readonly.html" />
+    <Content Include="Home\ckeditor\_samples\replacebyclass.html" />
+    <Content Include="Home\ckeditor\_samples\replacebycode.html" />
+    <Content Include="Home\ckeditor\_samples\sample.css" />
+    <Content Include="Home\ckeditor\_samples\sample.js" />
+    <Content Include="Home\ckeditor\_samples\sharedspaces.html" />
+    <Content Include="Home\ckeditor\_samples\skins.html" />
+    <Content Include="Home\ckeditor\_samples\stylesheetparser.html" />
+    <Content Include="Home\ckeditor\_samples\tableresize.html" />
+    <Content Include="Home\ckeditor\_samples\ui_color.html" />
+    <Content Include="Home\ckeditor\_samples\ui_languages.html" />
+    <Content Include="Home\ckeditor\_source\adapters\jquery.js" />
+    <Content Include="Home\ckeditor\_source\core\ckeditor.js" />
+    <Content Include="Home\ckeditor\_source\core\ckeditor_base.js" />
+    <Content Include="Home\ckeditor\_source\core\ckeditor_basic.js" />
+    <Content Include="Home\ckeditor\_source\core\command.js" />
+    <Content Include="Home\ckeditor\_source\core\commanddefinition.js" />
+    <Content Include="Home\ckeditor\_source\core\config.js" />
+    <Content Include="Home\ckeditor\_source\core\dataprocessor.js" />
+    <Content Include="Home\ckeditor\_source\core\dom.js" />
+    <Content Include="Home\ckeditor\_source\core\dom\comment.js" />
+    <Content Include="Home\ckeditor\_source\core\dom\document.js" />
+    <Content Include="Home\ckeditor\_source\core\dom\documentfragment.js" />
+    <Content Include="Home\ckeditor\_source\core\dom\domobject.js" />
+    <Content Include="Home\ckeditor\_source\core\dom\element.js" />
+    <Content Include="Home\ckeditor\_source\core\dom\elementpath.js" />
+    <Content Include="Home\ckeditor\_source\core\dom\event.js" />
+    <Content Include="Home\ckeditor\_source\core\dom\node.js" />
+    <Content Include="Home\ckeditor\_source\core\dom\nodelist.js" />
+    <Content Include="Home\ckeditor\_source\core\dom\range.js" />
+    <Content Include="Home\ckeditor\_source\core\dom\rangelist.js" />
+    <Content Include="Home\ckeditor\_source\core\dom\text.js" />
+    <Content Include="Home\ckeditor\_source\core\dom\walker.js" />
+    <Content Include="Home\ckeditor\_source\core\dom\window.js" />
+    <Content Include="Home\ckeditor\_source\core\dtd.js" />
+    <Content Include="Home\ckeditor\_source\core\editor.js" />
+    <Content Include="Home\ckeditor\_source\core\editor_basic.js" />
+    <Content Include="Home\ckeditor\_source\core\env.js" />
+    <Content Include="Home\ckeditor\_source\core\event.js" />
+    <Content Include="Home\ckeditor\_source\core\eventInfo.js" />
+    <Content Include="Home\ckeditor\_source\core\focusmanager.js" />
+    <Content Include="Home\ckeditor\_source\core\htmlparser.js" />
+    <Content Include="Home\ckeditor\_source\core\htmlparser\basicwriter.js" />
+    <Content Include="Home\ckeditor\_source\core\htmlparser\cdata.js" />
+    <Content Include="Home\ckeditor\_source\core\htmlparser\comment.js" />
+    <Content Include="Home\ckeditor\_source\core\htmlparser\element.js" />
+    <Content Include="Home\ckeditor\_source\core\htmlparser\filter.js" />
+    <Content Include="Home\ckeditor\_source\core\htmlparser\fragment.js" />
+    <Content Include="Home\ckeditor\_source\core\htmlparser\text.js" />
+    <Content Include="Home\ckeditor\_source\core\lang.js" />
+    <Content Include="Home\ckeditor\_source\core\loader.js" />
+    <Content Include="Home\ckeditor\_source\core\plugindefinition.js" />
+    <Content Include="Home\ckeditor\_source\core\plugins.js" />
+    <Content Include="Home\ckeditor\_source\core\resourcemanager.js" />
+    <Content Include="Home\ckeditor\_source\core\scriptloader.js" />
+    <Content Include="Home\ckeditor\_source\core\skins.js" />
+    <Content Include="Home\ckeditor\_source\core\themes.js" />
+    <Content Include="Home\ckeditor\_source\core\tools.js" />
+    <Content Include="Home\ckeditor\_source\core\ui.js" />
+    <Content Include="Home\ckeditor\_source\core\_bootstrap.js" />
+    <Content Include="Home\ckeditor\_source\lang\af.js" />
+    <Content Include="Home\ckeditor\_source\lang\ar.js" />
+    <Content Include="Home\ckeditor\_source\lang\bg.js" />
+    <Content Include="Home\ckeditor\_source\lang\bn.js" />
+    <Content Include="Home\ckeditor\_source\lang\bs.js" />
+    <Content Include="Home\ckeditor\_source\lang\ca.js" />
+    <Content Include="Home\ckeditor\_source\lang\cs.js" />
+    <Content Include="Home\ckeditor\_source\lang\cy.js" />
+    <Content Include="Home\ckeditor\_source\lang\da.js" />
+    <Content Include="Home\ckeditor\_source\lang\de.js" />
+    <Content Include="Home\ckeditor\_source\lang\el.js" />
+    <Content Include="Home\ckeditor\_source\lang\en-au.js" />
+    <Content Include="Home\ckeditor\_source\lang\en-ca.js" />
+    <Content Include="Home\ckeditor\_source\lang\en-gb.js" />
+    <Content Include="Home\ckeditor\_source\lang\en.js" />
+    <Content Include="Home\ckeditor\_source\lang\eo.js" />
+    <Content Include="Home\ckeditor\_source\lang\es.js" />
+    <Content Include="Home\ckeditor\_source\lang\et.js" />
+    <Content Include="Home\ckeditor\_source\lang\eu.js" />
+    <Content Include="Home\ckeditor\_source\lang\fa.js" />
+    <Content Include="Home\ckeditor\_source\lang\fi.js" />
+    <Content Include="Home\ckeditor\_source\lang\fo.js" />
+    <Content Include="Home\ckeditor\_source\lang\fr-ca.js" />
+    <Content Include="Home\ckeditor\_source\lang\fr.js" />
+    <Content Include="Home\ckeditor\_source\lang\gl.js" />
+    <Content Include="Home\ckeditor\_source\lang\gu.js" />
+    <Content Include="Home\ckeditor\_source\lang\he.js" />
+    <Content Include="Home\ckeditor\_source\lang\hi.js" />
+    <Content Include="Home\ckeditor\_source\lang\hr.js" />
+    <Content Include="Home\ckeditor\_source\lang\hu.js" />
+    <Content Include="Home\ckeditor\_source\lang\is.js" />
+    <Content Include="Home\ckeditor\_source\lang\it.js" />
+    <Content Include="Home\ckeditor\_source\lang\ja.js" />
+    <Content Include="Home\ckeditor\_source\lang\ka.js" />
+    <Content Include="Home\ckeditor\_source\lang\km.js" />
+    <Content Include="Home\ckeditor\_source\lang\ko.js" />
+    <Content Include="Home\ckeditor\_source\lang\lt.js" />
+    <Content Include="Home\ckeditor\_source\lang\lv.js" />
+    <Content Include="Home\ckeditor\_source\lang\mn.js" />
+    <Content Include="Home\ckeditor\_source\lang\ms.js" />
+    <Content Include="Home\ckeditor\_source\lang\nb.js" />
+    <Content Include="Home\ckeditor\_source\lang\nl.js" />
+    <Content Include="Home\ckeditor\_source\lang\no.js" />
+    <Content Include="Home\ckeditor\_source\lang\pl.js" />
+    <Content Include="Home\ckeditor\_source\lang\pt-br.js" />
+    <Content Include="Home\ckeditor\_source\lang\pt.js" />
+    <Content Include="Home\ckeditor\_source\lang\ro.js" />
+    <Content Include="Home\ckeditor\_source\lang\ru.js" />
+    <Content Include="Home\ckeditor\_source\lang\sk.js" />
+    <Content Include="Home\ckeditor\_source\lang\sl.js" />
+    <Content Include="Home\ckeditor\_source\lang\sr-latn.js" />
+    <Content Include="Home\ckeditor\_source\lang\sr.js" />
+    <Content Include="Home\ckeditor\_source\lang\sv.js" />
+    <Content Include="Home\ckeditor\_source\lang\th.js" />
+    <Content Include="Home\ckeditor\_source\lang\tr.js" />
+    <Content Include="Home\ckeditor\_source\lang\uk.js" />
+    <Content Include="Home\ckeditor\_source\lang\vi.js" />
+    <Content Include="Home\ckeditor\_source\lang\zh-cn.js" />
+    <Content Include="Home\ckeditor\_source\lang\zh.js" />
+    <Content Include="Home\ckeditor\_source\lang\_languages.js" />
+    <Content Include="Home\ckeditor\_source\lang\_translationstatus.txt" />
+    <Content Include="Home\ckeditor\_source\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Home\ckeditor\_source\plugins\a11yhelp\lang\en.js" />
+    <Content Include="Home\ckeditor\_source\plugins\a11yhelp\lang\he.js" />
+    <Content Include="Home\ckeditor\_source\plugins\a11yhelp\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\about\dialogs\about.js" />
+    <Content Include="Home\ckeditor\_source\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Home\ckeditor\_source\plugins\about\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\adobeair\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\ajax\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\autogrow\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\basicstyles\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\bbcode\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\bidi\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\blockquote\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\button\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Home\ckeditor\_source\plugins\clipboard\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\colorbutton\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="Home\ckeditor\_source\plugins\colordialog\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\contextmenu\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\devtools\lang\en.js" />
+    <Content Include="Home\ckeditor\_source\plugins\devtools\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\dialogadvtab\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\dialogui\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Home\ckeditor\_source\plugins\dialog\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\div\dialogs\div.js" />
+    <Content Include="Home\ckeditor\_source\plugins\div\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="Home\ckeditor\_source\plugins\docprops\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\domiterator\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\editingblock\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\elementspath\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\enterkey\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\entities\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\fakeobjects\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\filebrowser\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\find\dialogs\find.js" />
+    <Content Include="Home\ckeditor\_source\plugins\find\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\flash\dialogs\flash.js" />
+    <Content Include="Home\ckeditor\_source\plugins\flash\images\placeholder.png" />
+    <Content Include="Home\ckeditor\_source\plugins\flash\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\floatpanel\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\font\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\format\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\forms\dialogs\button.js" />
+    <Content Include="Home\ckeditor\_source\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="Home\ckeditor\_source\plugins\forms\dialogs\form.js" />
+    <Content Include="Home\ckeditor\_source\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="Home\ckeditor\_source\plugins\forms\dialogs\radio.js" />
+    <Content Include="Home\ckeditor\_source\plugins\forms\dialogs\select.js" />
+    <Content Include="Home\ckeditor\_source\plugins\forms\dialogs\textarea.js" />
+    <Content Include="Home\ckeditor\_source\plugins\forms\dialogs\textfield.js" />
+    <Content Include="Home\ckeditor\_source\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\forms\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\horizontalrule\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\htmldataprocessor\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\htmlwriter\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\iframedialog\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="Home\ckeditor\_source\plugins\iframe\images\placeholder.png" />
+    <Content Include="Home\ckeditor\_source\plugins\iframe\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\image\dialogs\image.js" />
+    <Content Include="Home\ckeditor\_source\plugins\image\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\indent\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\justify\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\keystrokes\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\link\dialogs\anchor.js" />
+    <Content Include="Home\ckeditor\_source\plugins\link\dialogs\link.js" />
+    <Content Include="Home\ckeditor\_source\plugins\link\images\anchor.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\link\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\listblock\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="Home\ckeditor\_source\plugins\liststyle\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\list\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\maximize\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\menubutton\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\menu\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\newpage\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\pagebreak\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\panelbutton\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\panel\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\pastefromword\filter\default.js" />
+    <Content Include="Home\ckeditor\_source\plugins\pastefromword\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="Home\ckeditor\_source\plugins\pastetext\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="Home\ckeditor\_source\plugins\placeholder\lang\en.js" />
+    <Content Include="Home\ckeditor\_source\plugins\placeholder\lang\he.js" />
+    <Content Include="Home\ckeditor\_source\plugins\placeholder\placeholder.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\placeholder\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\popup\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\preview\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\print\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\removeformat\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\resize\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\richcombo\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\save\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\scayt\dialogs\options.js" />
+    <Content Include="Home\ckeditor\_source\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Home\ckeditor\_source\plugins\scayt\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\selection\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\showblocks\images\block_address.png" />
+    <Content Include="Home\ckeditor\_source\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="Home\ckeditor\_source\plugins\showblocks\images\block_div.png" />
+    <Content Include="Home\ckeditor\_source\plugins\showblocks\images\block_h1.png" />
+    <Content Include="Home\ckeditor\_source\plugins\showblocks\images\block_h2.png" />
+    <Content Include="Home\ckeditor\_source\plugins\showblocks\images\block_h3.png" />
+    <Content Include="Home\ckeditor\_source\plugins\showblocks\images\block_h4.png" />
+    <Content Include="Home\ckeditor\_source\plugins\showblocks\images\block_h5.png" />
+    <Content Include="Home\ckeditor\_source\plugins\showblocks\images\block_h6.png" />
+    <Content Include="Home\ckeditor\_source\plugins\showblocks\images\block_p.png" />
+    <Content Include="Home\ckeditor\_source\plugins\showblocks\images\block_pre.png" />
+    <Content Include="Home\ckeditor\_source\plugins\showblocks\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\showborders\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\envelope.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\heart.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\kiss.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\smiley\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\sourcearea\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Home\ckeditor\_source\plugins\specialchar\lang\en.js" />
+    <Content Include="Home\ckeditor\_source\plugins\specialchar\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\stylescombo\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\stylesheetparser\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\styles\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\styles\styles\default.js" />
+    <Content Include="Home\ckeditor\_source\plugins\tableresize\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Home\ckeditor\_source\plugins\tabletools\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\table\dialogs\table.js" />
+    <Content Include="Home\ckeditor\_source\plugins\table\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\tab\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\templates\dialogs\templates.js" />
+    <Content Include="Home\ckeditor\_source\plugins\templates\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\templates\templates\default.js" />
+    <Content Include="Home\ckeditor\_source\plugins\templates\templates\images\template1.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\templates\templates\images\template2.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\templates\templates\images\template3.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\toolbar\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="Home\ckeditor\_source\plugins\uicolor\lang\en.js" />
+    <Content Include="Home\ckeditor\_source\plugins\uicolor\lang\he.js" />
+    <Content Include="Home\ckeditor\_source\plugins\uicolor\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\uicolor\uicolor.gif" />
+    <Content Include="Home\ckeditor\_source\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="Home\ckeditor\_source\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="Home\ckeditor\_source\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="Home\ckeditor\_source\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="Home\ckeditor\_source\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="Home\ckeditor\_source\plugins\uicolor\yui\yui.js" />
+    <Content Include="Home\ckeditor\_source\plugins\undo\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Home\ckeditor\_source\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Home\ckeditor\_source\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Home\ckeditor\_source\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Home\ckeditor\_source\plugins\wsc\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\wysiwygarea\plugin.js" />
+    <Content Include="Home\ckeditor\_source\plugins\xml\plugin.js" />
+    <Content Include="Home\ckeditor\_source\skins\kama\dialog.css" />
+    <Content Include="Home\ckeditor\_source\skins\kama\editor.css" />
+    <Content Include="Home\ckeditor\_source\skins\kama\elementspath.css" />
+    <Content Include="Home\ckeditor\_source\skins\kama\icons.css" />
+    <Content Include="Home\ckeditor\_source\skins\kama\icons.png" />
+    <Content Include="Home\ckeditor\_source\skins\kama\icons_rtl.png" />
+    <Content Include="Home\ckeditor\_source\skins\kama\images\dialog_sides.gif" />
+    <Content Include="Home\ckeditor\_source\skins\kama\images\dialog_sides.png" />
+    <Content Include="Home\ckeditor\_source\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="Home\ckeditor\_source\skins\kama\images\mini.gif" />
+    <Content Include="Home\ckeditor\_source\skins\kama\images\noimage.png" />
+    <Content Include="Home\ckeditor\_source\skins\kama\images\sprites.png" />
+    <Content Include="Home\ckeditor\_source\skins\kama\images\sprites_ie6.png" />
+    <Content Include="Home\ckeditor\_source\skins\kama\images\toolbar_start.gif" />
+    <Content Include="Home\ckeditor\_source\skins\kama\mainui.css" />
+    <Content Include="Home\ckeditor\_source\skins\kama\menu.css" />
+    <Content Include="Home\ckeditor\_source\skins\kama\panel.css" />
+    <Content Include="Home\ckeditor\_source\skins\kama\presets.css" />
+    <Content Include="Home\ckeditor\_source\skins\kama\reset.css" />
+    <Content Include="Home\ckeditor\_source\skins\kama\richcombo.css" />
+    <Content Include="Home\ckeditor\_source\skins\kama\skin.js" />
+    <Content Include="Home\ckeditor\_source\skins\kama\templates.css" />
+    <Content Include="Home\ckeditor\_source\skins\kama\toolbar.css" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\dialog.css" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\editor.css" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\elementspath.css" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\icons.css" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\icons.png" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\icons_rtl.png" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\images\dialog_sides.png" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\images\mini.gif" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\images\noimage.png" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\images\sprites.png" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\mainui.css" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\menu.css" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\panel.css" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\presets.css" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\reset.css" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\richcombo.css" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\skin.js" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\templates.css" />
+    <Content Include="Home\ckeditor\_source\skins\office2003\toolbar.css" />
+    <Content Include="Home\ckeditor\_source\skins\v2\dialog.css" />
+    <Content Include="Home\ckeditor\_source\skins\v2\editor.css" />
+    <Content Include="Home\ckeditor\_source\skins\v2\elementspath.css" />
+    <Content Include="Home\ckeditor\_source\skins\v2\icons.css" />
+    <Content Include="Home\ckeditor\_source\skins\v2\icons.png" />
+    <Content Include="Home\ckeditor\_source\skins\v2\icons_rtl.png" />
+    <Content Include="Home\ckeditor\_source\skins\v2\images\dialog_sides.gif" />
+    <Content Include="Home\ckeditor\_source\skins\v2\images\dialog_sides.png" />
+    <Content Include="Home\ckeditor\_source\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="Home\ckeditor\_source\skins\v2\images\mini.gif" />
+    <Content Include="Home\ckeditor\_source\skins\v2\images\noimage.png" />
+    <Content Include="Home\ckeditor\_source\skins\v2\images\sprites.png" />
+    <Content Include="Home\ckeditor\_source\skins\v2\images\sprites_ie6.png" />
+    <Content Include="Home\ckeditor\_source\skins\v2\images\toolbar_start.gif" />
+    <Content Include="Home\ckeditor\_source\skins\v2\mainui.css" />
+    <Content Include="Home\ckeditor\_source\skins\v2\menu.css" />
+    <Content Include="Home\ckeditor\_source\skins\v2\panel.css" />
+    <Content Include="Home\ckeditor\_source\skins\v2\presets.css" />
+    <Content Include="Home\ckeditor\_source\skins\v2\reset.css" />
+    <Content Include="Home\ckeditor\_source\skins\v2\richcombo.css" />
+    <Content Include="Home\ckeditor\_source\skins\v2\skin.js" />
+    <Content Include="Home\ckeditor\_source\skins\v2\templates.css" />
+    <Content Include="Home\ckeditor\_source\skins\v2\toolbar.css" />
+    <Content Include="Home\ckeditor\_source\themes\default\theme.js" />
+    <Content Include="Home\css\addstyle.css" />
+    <Content Include="Home\css\appstyle.css" />
+    <Content Include="Home\css\bilstyle.css" />
+    <Content Include="Home\css\blogstyle.css" />
+    <Content Include="Home\css\blstyle.css" />
+    <Content Include="Home\css\bostyle.css" />
+    <Content Include="Home\css\cartstyle.css" />
+    <Content Include="Home\css\cmstyle.css" />
+    <Content Include="Home\css\colstyle.css" />
+    <Content Include="Home\css\cpstyle.css" />
+    <Content Include="Home\css\dicss.css" />
+    <Content Include="Home\css\dlstyle.css" />
+    <Content Include="Home\css\footstyle.css" />
+    <Content Include="Home\css\hmstyle.css" />
+    <Content Include="Home\css\infstyle.css" />
+    <Content Include="Home\css\jsstyle.css" />
+    <Content Include="Home\css\lostyle.css" />
+    <Content Include="Home\css\newstyle.css" />
+    <Content Include="Home\css\optstyle.css" />
+    <Content Include="Home\css\orstyle.css" />
+    <Content Include="Home\css\pageBarStyle.css" />
+    <Content Include="Home\css\personal.css" />
+    <Content Include="Home\css\refstyle.css" />
+    <Content Include="Home\css\seastyle.css" />
+    <Content Include="Home\css\skin.css" />
+    <Content Include="Home\css\sortstyle.css" />
+    <Content Include="Home\css\stepstyle.css" />
+    <Content Include="Home\css\style.css" />
+    <Content Include="Home\css\sustyle.css" />
+    <Content Include="Home\css\systyle.css" />
+    <Content Include="Home\images\-0-saturn_solar.jpg_220x220.jpg" />
+    <Content Include="Home\images\0-item_pic.jpg_220x220.jpg" />
+    <Content Include="Home\images\01.jpg" />
+    <Content Include="Home\images\01_mid.jpg" />
+    <Content Include="Home\images\01_small.jpg" />
+    <Content Include="Home\images\02.jpg" />
+    <Content Include="Home\images\02_mid.jpg" />
+    <Content Include="Home\images\02_small.jpg" />
+    <Content Include="Home\images\03.jpg" />
+    <Content Include="Home\images\03_mid.jpg" />
+    <Content Include="Home\images\03_small.jpg" />
+    <Content Include="Home\images\1-item_pic.jpg_220x220.jpg" />
+    <Content Include="Home\images\1.jpg" />
+    <Content Include="Home\images\10.jpg" />
+    <Content Include="Home\images\11.jpg" />
+    <Content Include="Home\images\1_160x160.jpg" />
+    <Content Include="Home\images\2.jpg" />
+    <Content Include="Home\images\2016.png" />
+    <Content Include="Home\images\3.jpg" />
+    <Content Include="Home\images\3CoOkxrFOP.png" />
+    <Content Include="Home\images\4.jpg" />
+    <Content Include="Home\images\5.jpg" />
+    <Content Include="Home\images\556.png" />
+    <Content Include="Home\images\557.png" />
+    <Content Include="Home\images\559.png" />
+    <Content Include="Home\images\566.png" />
+    <Content Include="Home\images\566fda5cN4b8a1675.gif" />
+    <Content Include="Home\images\6.jpg" />
+    <Content Include="Home\images\62988.jpg_80x80.jpg" />
+    <Content Include="Home\images\65.jpg_120x120xz.jpg" />
+    <Content Include="Home\images\7.jpg" />
+    <Content Include="Home\images\72h.png" />
+    <Content Include="Home\images\8.jpg" />
+    <Content Include="Home\images\88.jpg_120x120xz.jpg" />
+    <Content Include="Home\images\9.jpg" />
+    <Content Include="Home\images\act1.png" />
+    <Content Include="Home\images\act2.png" />
+    <Content Include="Home\images\act3.png" />
+    <Content Include="Home\images\activity.jpg" />
+    <Content Include="Home\images\activity1.jpg" />
+    <Content Include="Home\images\activity2.jpg" />
+    <Content Include="Home\images\activity3.jpg" />
+    <Content Include="Home\images\ad1.jpg" />
+    <Content Include="Home\images\ad2.jpg" />
+    <Content Include="Home\images\ad3.jpg" />
+    <Content Include="Home\images\ad4.jpg" />
+    <Content Include="Home\images\ad5.jpg" />
+    <Content Include="Home\images\ad6.jpg" />
+    <Content Include="Home\images\ad7.jpg" />
+    <Content Include="Home\images\ad8.jpg" />
+    <Content Include="Home\images\addbg.png" />
+    <Content Include="Home\images\addicon.png" />
+    <Content Include="Home\images\addicon1.png" />
+    <Content Include="Home\images\addicon2.png" />
+    <Content Include="Home\images\advTip.jpg" />
+    <Content Include="Home\images\bamboo.jpg" />
+    <Content Include="Home\images\bamboo.png" />
+    <Content Include="Home\images\big.jpg" />
+    <Content Include="Home\images\big.png" />
+    <Content Include="Home\images\blog01.jpg" />
+    <Content Include="Home\images\blog02.jpg" />
+    <Content Include="Home\images\blog03.jpg" />
+    <Content Include="Home\images\blog04.jpg" />
+    <Content Include="Home\images\blog05.jpg" />
+    <Content Include="Home\images\blog06.jpg" />
+    <Content Include="Home\images\blog07.jpg" />
+    <Content Include="Home\images\blog08.jpg" />
+    <Content Include="Home\images\blog09.jpg" />
+    <Content Include="Home\images\bonus.png" />
+    <Content Include="Home\images\browse1.jpg" />
+    <Content Include="Home\images\cake.jpg" />
+    <Content Include="Home\images\cake.png" />
+    <Content Include="Home\images\candy.jpg" />
+    <Content Include="Home\images\candy.png" />
+    <Content Include="Home\images\cardbg.jpg" />
+    <Content Include="Home\images\checkbox.gif" />
+    <Content Include="Home\images\chocolate.jpg" />
+    <Content Include="Home\images\chocolate.png" />
+    <Content Include="Home\images\chongzhi.png" />
+    <Content Include="Home\images\clockbg.png" />
+    <Content Include="Home\images\close.png" />
+    <Content Include="Home\images\combo.png" />
+    <Content Include="Home\images\comment.jpg_400x400.jpg" />
+    <Content Include="Home\images\comment.png" />
+    <Content Include="Home\images\cookies.jpg" />
+    <Content Include="Home\images\cookies.png" />
+    <Content Include="Home\images\coupon.png" />
+    <Content Include="Home\images\coupon2015.png" />
+    <Content Include="Home\images\coupon20150805.png" />
+    <Content Include="Home\images\couponli.png" />
+    <Content Include="Home\images\cp.jpg" />
+    <Content Include="Home\images\cp2.jpg" />
+    <Content Include="Home\images\day-to.png" />
+    <Content Include="Home\images\extra.png" />
+    <Content Include="Home\images\fahuo.png" />
+    <Content Include="Home\images\fish.jpg" />
+    <Content Include="Home\images\fish.png" />
+    <Content Include="Home\images\getAvatar.do.jpg" />
+    <Content Include="Home\images\gift_intro_bg.png" />
+    <Content Include="Home\images\gift_stamp_1.png" />
+    <Content Include="Home\images\gift_stamp_2.png" />
+    <Content Include="Home\images\gift_stamp_21.png" />
+    <Content Include="Home\images\gift_stamp_3.png" />
+    <Content Include="Home\images\gift_stamp_31.png" />
+    <Content Include="Home\images\header-bg.png" />
+    <Content Include="Home\images\header-bg1.jpg" />
+    <Content Include="Home\images\huismall.jpg" />
+    <Content Include="Home\images\hwbn40x40.jpg" />
+    <Content Include="Home\images\ibar_sprites.png" />
+    <Content Include="Home\images\icon-sale.png" />
+    <Content Include="Home\images\iconbig.png" />
+    <Content Include="Home\images\iconfont-bad.png" />
+    <Content Include="Home\images\iconfont-badon.png" />
+    <Content Include="Home\images\iconfont-evaluate.png" />
+    <Content Include="Home\images\iconfont-good.png" />
+    <Content Include="Home\images\iconfont-middle.png" />
+    <Content Include="Home\images\iconsmall.png" />
+    <Content Include="Home\images\iconsmall0.png" />
+    <Content Include="Home\images\iconsmall1.png" />
+    <Content Include="Home\images\iconsmall2.png" />
+    <Content Include="Home\images\iconsmall3.png" />
+    <Content Include="Home\images\image.jpg" />
+    <Content Include="Home\images\imgsearch1.jpg" />
+    <Content Include="Home\images\index_ico_png32.png" />
+    <Content Include="Home\images\item-pic.jpg" />
+    <Content Include="Home\images\kouhong.jpg_80x80.jpg" />
+    <Content Include="Home\images\kuaidi.png" />
+    <Content Include="Home\images\list1.jpg" />
+    <Content Include="Home\images\listsmall1.jpg" />
+    <Content Include="Home\images\loading.gif" />
+    <Content Include="Home\images\logo.png" />
+    <Content Include="Home\images\logo1.png" />
+    <Content Include="Home\images\logobig.png" />
+    <Content Include="Home\images\logobig1.png" />
+    <Content Include="Home\images\logobig2.png" />
+    <Content Include="Home\images\mansmall.jpg" />
+    <Content Include="Home\images\mask.png" />
+    <Content Include="Home\images\meat.jpg" />
+    <Content Include="Home\images\meat.png" />
+    <Content Include="Home\images\moneysmall.jpg" />
+    <Content Include="Home\images\mygift_bg.png" />
+    <Content Include="Home\images\navce.png" />
+    <Content Include="Home\images\navsmall.jpg" />
+    <Content Include="Home\images\no-img_mid_.jpg" />
+    <Content Include="Home\images\nut.jpg" />
+    <Content Include="Home\images\nut.png" />
+    <Content Include="Home\images\package.jpg" />
+    <Content Include="Home\images\package.png" />
+    <Content Include="Home\images\pay.png" />
+    <Content Include="Home\images\peraddbg.png" />
+    <Content Include="Home\images\peraddress.png" />
+    <Content Include="Home\images\peraddressbg.png" />
+    <Content Include="Home\images\receive.png" />
+    <Content Include="Home\images\refund.png" />
+    <Content Include="Home\images\return-process-cd.jpg" />
+    <Content Include="Home\images\row1.jpg" />
+    <Content Include="Home\images\row2.jpg" />
+    <Content Include="Home\images\row3.jpg" />
+    <Content Include="Home\images\row4.jpg" />
+    <Content Include="Home\images\sale-t.jpg" />
+    <Content Include="Home\images\sale-t_clock.jpg" />
+    <Content Include="Home\images\sale1.jpg" />
+    <Content Include="Home\images\sale2.jpg" />
+    <Content Include="Home\images\sale3.jpg" />
+    <Content Include="Home\images\scoll1.png" />
+    <Content Include="Home\images\scoll2.png" />
+    <Content Include="Home\images\send.png" />
+    <Content Include="Home\images\side.png" />
+    <Content Include="Home\images\songzi.jpg" />
+    <Content Include="Home\images\sprite.png" />
+    <Content Include="Home\images\sys_item_selected.gif" />
+    <Content Include="Home\images\T13iv.XiFdXXa94Hfd-32-32.png" />
+    <Content Include="Home\images\TB102.jpg" />
+    <Content Include="Home\images\TB1SSK7JpXXXXXCXXXXXXXXXXXX-800-600.png" />
+    <Content Include="Home\images\TB1_pic.jpg_200x200.jpg" />
+    <Content Include="Home\images\tea.jpg" />
+    <Content Include="Home\images\tea.png" />
+    <Content Include="Home\images\TJ.jpg" />
+    <Content Include="Home\images\tj.png" />
+    <Content Include="Home\images\tj1.png" />
+    <Content Include="Home\images\TJ2.jpg" />
+    <Content Include="Home\images\tj2.png" />
+    <Content Include="Home\images\tw1.jpg" />
+    <Content Include="Home\images\tw2.jpg" />
+    <Content Include="Home\images\tw3.jpg" />
+    <Content Include="Home\images\tw4.jpg" />
+    <Content Include="Home\images\tw5.jpg" />
+    <Content Include="Home\images\tw6.jpg" />
+    <Content Include="Home\images\tw7.jpg" />
+    <Content Include="Home\images\wallet.png" />
+    <Content Include="Home\images\wangyin.jpg" />
+    <Content Include="Home\images\wdsc.png" />
+    <Content Include="Home\images\weixin_code_145.png" />
+    <Content Include="Home\images\weizhifu.jpg" />
+    <Content Include="Home\images\YXARdXxj5.png" />
+    <Content Include="Home\images\zhifubao.jpg" />
+    <Content Include="Home\images\图标.png" />
+    <Content Include="Home\js\address.js" />
+    <Content Include="Home\js\dijs.js" />
+    <Content Include="Home\js\distpicker.data.js" />
+    <Content Include="Home\js\distpicker.js" />
+    <Content Include="Home\js\gt.js" />
+    <Content Include="Home\js\jquery-1.7.2.min.js" />
+    <Content Include="Home\js\jquery.flexslider.js" />
+    <Content Include="Home\js\jquery.imagezoom.min.js" />
+    <Content Include="Home\js\jquery.min.js" />
+    <Content Include="Home\js\jquery.validate.min.js" />
+    <Content Include="Home\js\list.js" />
+    <Content Include="Home\js\main.js" />
+    <Content Include="Home\js\script.js" />
+    <Content Include="Home\js\Search.js" />
+    <Content Include="Home\Page\BookDetails.aspx" />
+    <Content Include="Home\Page\BookList.aspx" />
+    <Content Include="Home\Page\Index.aspx" />
+    <Content Include="Home\Page\Login.aspx" />
+    <Content Include="Home\Page\PayPage.aspx" />
+    <Content Include="Home\Page\Register.aspx" />
+    <Content Include="Home\Page\Retrieve_Password.aspx" />
+    <Content Include="Home\Page\SearchDetails.aspx" />
+    <Content Include="Home\Page\ShopCart.aspx" />
+    <Content Include="Home\Page\Success.aspx" />
+    <Content Include="Home\Page\WebForm1.aspx" />
+    <Content Include="Home\person\address.aspx" />
+    <Content Include="Home\person\bill.aspx" />
+    <Content Include="Home\person\bindphone.aspx" />
+    <Content Include="Home\person\email.aspx" />
+    <Content Include="Home\person\index.aspx" />
+    <Content Include="Home\person\information.aspx" />
+    <Content Include="Home\person\order.aspx" />
+    <Content Include="Home\person\orderinfo.aspx" />
+    <Content Include="Home\person\password.aspx" />
+    <Content Include="Home\person\safety.aspx" />
+    <Content Include="Home\WebForm1.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Ashx\AdAdd.ashx.cs">
+      <DependentUpon>AdAdd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ashx\AddArticle.ashx.cs">
+      <DependentUpon>AddArticle.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ashx\AdDelete.ashx.cs">
+      <DependentUpon>AdDelete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ashx\AddTypeName.ashx.cs">
+      <DependentUpon>AddTypeName.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ashx\AdEdit.ashx.cs">
+      <DependentUpon>AdEdit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ashx\AdUpdate.ashx.cs">
+      <DependentUpon>AdUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ashx\BooksAdd.ashx.cs">
+      <DependentUpon>BooksAdd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ashx\DaleteBookManager.ashx.cs">
+      <DependentUpon>DaleteBookManager.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ashx\DeleteArticle.ashx.cs">
+      <DependentUpon>DeleteArticle.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ashx\DeleteBookTypeManager.ashx.cs">
+      <DependentUpon>DeleteBookTypeManager.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ashx\DeleteSearch.ashx.cs">
+      <DependentUpon>DeleteSearch.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ashx\EditBookManager.ashx.cs">
+      <DependentUpon>EditBookManager.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ashx\LoginJudgement.ashx.cs">
+      <DependentUpon>LoginJudgement.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ashx\SignOutAdmin.ashx.cs">
+      <DependentUpon>SignOutAdmin.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ashx\UpdateOrder.ashx.cs">
+      <DependentUpon>UpdateOrder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ashx\updateTypeName.ashx.cs">
+      <DependentUpon>updateTypeName.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ashx\UpdateUserInfost.ashx.cs">
+      <DependentUpon>UpdateUserInfost.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Page\AdvertisingManager.aspx.cs">
+      <DependentUpon>AdvertisingManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Page\AdvertisingManager.aspx.designer.cs">
+      <DependentUpon>AdvertisingManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Page\Article_WordManager.aspx.cs">
+      <DependentUpon>Article_WordManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Page\Article_WordManager.aspx.designer.cs">
+      <DependentUpon>Article_WordManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Page\BaseCheckAdmin.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Page\BookManager.aspx.cs">
+      <DependentUpon>BookManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Page\BookManager.aspx.designer.cs">
+      <DependentUpon>BookManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Page\BooksAdd.aspx.cs">
+      <DependentUpon>BooksAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Page\BooksAdd.aspx.designer.cs">
+      <DependentUpon>BooksAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Page\BookTypeManager.aspx.cs">
+      <DependentUpon>BookTypeManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Page\BookTypeManager.aspx.designer.cs">
+      <DependentUpon>BookTypeManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Page\CommentManager.aspx.cs">
+      <DependentUpon>CommentManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Page\CommentManager.aspx.designer.cs">
+      <DependentUpon>CommentManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Page\EditBook.aspx.cs">
+      <DependentUpon>EditBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Page\EditBook.aspx.designer.cs">
+      <DependentUpon>EditBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Page\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Page\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Page\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Page\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Page\OrderDetails.aspx.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Page\OrderDetails.aspx.designer.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Page\OrderManager.aspx.cs">
+      <DependentUpon>OrderManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Page\OrderManager.aspx.designer.cs">
+      <DependentUpon>OrderManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Page\SearchManager.aspx.cs">
+      <DependentUpon>SearchManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Page\SearchManager.aspx.designer.cs">
+      <DependentUpon>SearchManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Page\UpdateOrders.aspx.cs">
+      <DependentUpon>UpdateOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Page\UpdateOrders.aspx.designer.cs">
+      <DependentUpon>UpdateOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Map.aspx.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Map.aspx.designer.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\AddCart.ashx.cs">
+      <DependentUpon>AddCart.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\AddComment.ashx.cs">
+      <DependentUpon>AddComment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\AddOrder.ashx.cs">
+      <DependentUpon>AddOrder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\AddUsers.ashx.cs">
+      <DependentUpon>AddUsers.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\Add_address.ashx.cs">
+      <DependentUpon>Add_address.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\BookDetails.ashx.cs">
+      <DependentUpon>BookDetails.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\BuyNow.ashx.cs">
+      <DependentUpon>BuyNow.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\CancelOrder.ashx.cs">
+      <DependentUpon>CancelOrder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\CartLogin.ashx.cs">
+      <DependentUpon>CartLogin.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\CartLoginJudgment.ashx.cs">
+      <DependentUpon>CartLoginJudgment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\DeleteAddress.ashx.cs">
+      <DependentUpon>DeleteAddress.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\DeleteCart.ashx.cs">
+      <DependentUpon>DeleteCart.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\DeleteOrder.ashx.cs">
+      <DependentUpon>DeleteOrder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\exits.ashx.cs">
+      <DependentUpon>exits.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\JiYan.ashx.cs">
+      <DependentUpon>JiYan.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\LoadComment.ashx.cs">
+      <DependentUpon>LoadComment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\Login.ashx.cs">
+      <DependentUpon>Login.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\PayPage.ashx.cs">
+      <DependentUpon>PayPage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\Retrieve_Pwd.ashx.cs">
+      <DependentUpon>Retrieve_Pwd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\sendPhoneVali.ashx.cs">
+      <DependentUpon>sendPhoneVali.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\UpdateAddress.ashx.cs">
+      <DependentUpon>UpdateAddress.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\updateCart.ashx.cs">
+      <DependentUpon>updateCart.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\UpdateEmail.ashx.cs">
+      <DependentUpon>UpdateEmail.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\updatePhone.ashx.cs">
+      <DependentUpon>updatePhone.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\updatePwd.ashx.cs">
+      <DependentUpon>updatePwd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Ashx\updateUsers.ashx.cs">
+      <DependentUpon>updateUsers.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Page\BookDetails.aspx.cs">
+      <DependentUpon>BookDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Page\BookDetails.aspx.designer.cs">
+      <DependentUpon>BookDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Page\BookList.aspx.cs">
+      <DependentUpon>BookList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Page\BookList.aspx.designer.cs">
+      <DependentUpon>BookList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Page\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Page\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Page\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Page\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Page\PayPage.aspx.cs">
+      <DependentUpon>PayPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Page\PayPage.aspx.designer.cs">
+      <DependentUpon>PayPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Page\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Page\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Page\Retrieve_Password.aspx.cs">
+      <DependentUpon>Retrieve_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Page\Retrieve_Password.aspx.designer.cs">
+      <DependentUpon>Retrieve_Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Page\SearchDetails.aspx.cs">
+      <DependentUpon>SearchDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Page\SearchDetails.aspx.designer.cs">
+      <DependentUpon>SearchDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Page\ShopCart.aspx.cs">
+      <DependentUpon>ShopCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Page\ShopCart.aspx.designer.cs">
+      <DependentUpon>ShopCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Page\Success.aspx.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Page\Success.aspx.designer.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Page\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Page\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\person\address.aspx.cs">
+      <DependentUpon>address.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\person\address.aspx.designer.cs">
+      <DependentUpon>address.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\person\bill.aspx.cs">
+      <DependentUpon>bill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\person\bill.aspx.designer.cs">
+      <DependentUpon>bill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\person\bindphone.aspx.cs">
+      <DependentUpon>bindphone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\person\bindphone.aspx.designer.cs">
+      <DependentUpon>bindphone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\person\email.aspx.cs">
+      <DependentUpon>email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\person\email.aspx.designer.cs">
+      <DependentUpon>email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\person\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\person\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\person\information.aspx.cs">
+      <DependentUpon>information.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\person\information.aspx.designer.cs">
+      <DependentUpon>information.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\person\order.aspx.cs">
+      <DependentUpon>order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\person\order.aspx.designer.cs">
+      <DependentUpon>order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\person\orderinfo.aspx.cs">
+      <DependentUpon>orderinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\person\orderinfo.aspx.designer.cs">
+      <DependentUpon>orderinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\person\password.aspx.cs">
+      <DependentUpon>password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\person\password.aspx.designer.cs">
+      <DependentUpon>password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\person\safety.aspx.cs">
+      <DependentUpon>safety.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\person\safety.aspx.designer.cs">
+      <DependentUpon>safety.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Home\AmazeUI-2.4.2\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Home\AmazeUI-2.4.2\assets\fonts\FontAwesome.otf" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Admin\assets\fonts\FontAwesome.otf" />
+    <Content Include="Home\Ashx\sendPhoneVali.ashx" />
+    <Content Include="Home\Ashx\AddUsers.ashx" />
+    <Content Include="Home\Ashx\JiYan.ashx" />
+    <Content Include="Home\Ashx\Login.ashx" />
+    <Content Include="Home\Ashx\Retrieve_Pwd.ashx" />
+    <Content Include="BookCovers\9787560925110jpg" />
+    <Content Include="Home\Ashx\BookDetails.ashx" />
+    <Content Include="Home\ckeditor\.htaccess" />
+    <Content Include="Home\ckeditor\ckeditor.pack" />
+    <Content Include="Home\ckeditor\ckeditor.php" />
+    <Content Include="Home\ckeditor\ckeditor_php4.php" />
+    <Content Include="Home\ckeditor\ckeditor_php5.php" />
+    <Content Include="Home\ckeditor\_samples\adobeair\run.bat" />
+    <Content Include="Home\ckeditor\_samples\adobeair\run.sh" />
+    <Content Include="Home\ckeditor\_samples\assets\output_for_flash.fla" />
+    <Content Include="Home\ckeditor\_samples\assets\_posteddata.php" />
+    <Content Include="Home\ckeditor\_samples\php\advanced.php" />
+    <Content Include="Home\ckeditor\_samples\php\events.php" />
+    <Content Include="Home\ckeditor\_samples\php\replace.php" />
+    <Content Include="Home\ckeditor\_samples\php\replaceall.php" />
+    <Content Include="Home\ckeditor\_samples\php\standalone.php" />
+    <Content Include="Home\ckeditor\_samples\sample_posteddata.php" />
+    <Content Include="Home\Ashx\AddComment.ashx" />
+    <Content Include="Home\Ashx\LoadComment.ashx" />
+    <Content Include="Home\Ashx\CartLogin.ashx" />
+    <Content Include="Home\Ashx\CartLoginJudgment.ashx" />
+    <Content Include="Home\Ashx\AddCart.ashx" />
+    <Content Include="Home\Ashx\updateCart.ashx" />
+    <Content Include="Home\Ashx\DeleteCart.ashx" />
+    <Content Include="Home\Ashx\AddOrder.ashx" />
+    <Content Include="Home\Ashx\PayPage.ashx" />
+    <Content Include="Home\Ashx\Add_address.ashx" />
+    <Content Include="Home\Ashx\DeleteAddress.ashx" />
+    <Content Include="Home\Ashx\UpdateAddress.ashx" />
+    <Content Include="Home\Ashx\updateUsers.ashx" />
+    <Content Include="Home\Ashx\updatePhone.ashx" />
+    <Content Include="Home\Ashx\updatePwd.ashx" />
+    <Content Include="Home\Ashx\UpdateEmail.ashx" />
+    <Content Include="Home\Ashx\DeleteOrder.ashx" />
+    <Content Include="Home\Ashx\BuyNow.ashx" />
+    <Content Include="Admin\Ashx\LoginJudgement.ashx" />
+    <Content Include="Home\Ashx\CancelOrder.ashx" />
+    <Content Include="Admin\Ashx\UpdateOrder.ashx" />
+    <Content Include="Admin\Ashx\UpdateUserInfost.ashx" />
+    <Content Include="Admin\Ashx\AddArticle.ashx" />
+    <Content Include="Admin\Ashx\DeleteArticle.ashx" />
+    <Content Include="Admin\Ashx\DeleteSearch.ashx" />
+    <Content Include="Admin\Ashx\AddTypeName.ashx" />
+    <Content Include="Admin\Ashx\BooksAdd.ashx" />
+    <Content Include="Admin\Ashx\DaleteBookManager.ashx" />
+    <Content Include="Admin\Ashx\DeleteBookTypeManager.ashx" />
+    <Content Include="Admin\Ashx\EditBookManager.ashx" />
+    <Content Include="Admin\Ashx\updateTypeName.ashx" />
+    <Content Include="Admin\Ashx\SignOutAdmin.ashx" />
+    <Content Include="Admin\Ashx\AdAdd.ashx" />
+    <Content Include="Admin\Ashx\AdDelete.ashx" />
+    <Content Include="Admin\Ashx\AdEdit.ashx" />
+    <Content Include="Admin\Ashx\AdUpdate.ashx" />
+    <Content Include="Home\Ashx\exits.ashx" />
+    <None Include="Properties\PublishProfiles\asdf.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38d7aa58-c95b-449b-86c6-a8073a56e11f}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{2786950d-9914-458f-b759-19aeebad95b9}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995dbb-9836-4647-ad22-865884fdeb9e}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:40249/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
